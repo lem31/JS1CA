@@ -174,7 +174,7 @@ async function showFilmsByCategory(films) {
 
 
 
-showAllFilms();
+showAllFilms(films);
 
 showFilmsByCategory(films);
 
