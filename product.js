@@ -28,19 +28,13 @@ function fetchSquareEyesAPI(){
   
 
 
-
-
-  function addFilmToCart(film){ 
-
-  } 
+ 
   
   
   
   function createFilmsHtml(film){
 
 
-const ratingImg = document.createElement('img');
-ratingImg.src = "https://img.icons8.com/ios-filled/50/rating.png";
   
   const filmBox = document.createElement('div');
     filmBox.classList.add('film-box');
@@ -70,6 +64,9 @@ ratingImg.src = "https://img.icons8.com/ios-filled/50/rating.png";
 
   const ratingBox = document.createElement('div');
   ratingBox.classList.add('rating-box');
+ 
+const ratingImg = document.createElement('img');
+ratingImg.src = "https://img.icons8.com/ios-filled/50/rating.png";
 
   const buttonBox = document.createElement('div');
 
@@ -97,24 +94,37 @@ ratingBox.append(ratingImg, rating);
   console.log(films);
   
 
-
-function showProduct(films){
- 
   const productItem = films[0];
 
+function showProduct(){
+ 
+  
 
   const filmDisplayBox = document.getElementById('films-display-box');
          const filmHtml= createFilmsHtml(productItem);
-          filmDisplayBox.appendChild(filmHtml);
-        
+          filmDisplayBox.appendChild(filmHtml);}
+  
+showProduct();
+
+
+
+
+
+function createFilmCart(){
+  const filmCart = localStorage.getItem('cart');
+  if (!filmCart)  { localStorage.setItem('cart', JSON.stringify([]))}
 }
-  
-  
-showProduct(films);
+
+createFilmCart();
 
 
+function addFilmToCart(productItem){ 
+  const filmCart = JSON.parse(localStorage.getItem('cart'));
+  filmCart.push(productItem);
+  localStorage.setItem('cart', JSON.stringify(filmCart));
+  console.log(filmCart);
+} 
 
-
-
+addFilmToCart(productItem);
 
 
