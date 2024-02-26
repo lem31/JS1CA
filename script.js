@@ -45,6 +45,10 @@ const filmPoster = document.createElement('img');
 filmPoster.src = film.image.url;
 filmPoster.classList.add('film-poster');
 
+const posterLink = document.createElement("a");
+
+posterLink.href= `/product.html?id=$(film.id)`;
+
 const filmPriceBox = document.createElement('div');
 
 const filmPrice = document.createElement('div');
@@ -61,11 +65,11 @@ infoButton.addEventListener('click', () => {
   document.location.href = "product.html";
 })
 
-
+posterLink.appendChild(filmPoster);
 
 filmBox.appendChild(filmContent);
 
-filmContent.append(filmHeader, filmPoster, filmPriceBox, infoButton);
+filmContent.append(filmHeader, posterLink, filmPoster, filmPriceBox, infoButton);
 
 filmPriceBox.append(filmPrice);
 

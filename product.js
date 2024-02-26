@@ -25,12 +25,18 @@ function fetchSquareEyesAPI(){
   
   
   let films = JSON.parse(localStorage.getItem("listOfFilms"))
+
+
+
+  function displayClickedFilm(){
+    const queryString = document.location.search;
+    const params = new URLSearchParams(queryString);
+    const id = params.get("id");};
+    
+    displayClickedFilm();
   
 
 
- 
-  
-  
   
   function createFilmsHtml(film){
 
@@ -127,8 +133,12 @@ if(films.id === currentFilm.id ){
   return true;
 } else{
   return false;
+}});
+
+if(filmIndex === -1){
+  filmCart.push({...films, quantity: 0});
 }
-})
+
 
 console.log(filmIndex);
 
@@ -137,7 +147,7 @@ console.log(filmIndex);
   filmCart.push(films);
   localStorage.setItem('filmCart', JSON.stringify(filmCart));
   console.log(filmCart);
-} 
+}
 
 addFilmToCart(films);
 
