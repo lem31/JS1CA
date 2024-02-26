@@ -34,7 +34,7 @@ const id = params.get("id");
 
 const squareEyesAPI = "https://v2.api.noroff.dev/square-eyes";
 
-// FETCHES THE MOVIE WITH THE ID
+
 async function fetchClickedFilm() { 
   const response = await fetch(`${squareEyesAPI}/${id}`); 
   const films = await response.json();
