@@ -75,6 +75,8 @@ ratingImg.src = "https://img.icons8.com/ios-filled/50/rating.png";
 
 addToCartBtn.addEventListener('click', ()=>{
   addFilmToCart(film);
+
+
 } )
 
 
@@ -94,15 +96,14 @@ ratingBox.append(ratingImg, rating);
   console.log(films);
   
 
-  const productItem = films[0];
+
 
 function showProduct(){
  
-  
-
+  const productItem = films[0];
   const filmDisplayBox = document.getElementById('films-display-box');
-         const filmHtml= createFilmsHtml(productItem);
-          filmDisplayBox.appendChild(filmHtml);}
+  const filmHtml= createFilmsHtml(productItem);
+  filmDisplayBox.appendChild(filmHtml);}
   
 showProduct();
 
@@ -111,20 +112,33 @@ showProduct();
 
 
 function createFilmCart(){
-  const filmCart = localStorage.getItem('cart');
-  if (!filmCart)  { localStorage.setItem('cart', JSON.stringify([]))}
+  const filmCart = localStorage.getItem('filmCart');
+  if (!filmCart)  { localStorage.setItem('filmCart', JSON.stringify([]))}
 }
 
 createFilmCart();
 
 
-function addFilmToCart(productItem){ 
-  const filmCart = JSON.parse(localStorage.getItem('cart'));
-  filmCart.push(productItem);
-  localStorage.setItem('cart', JSON.stringify(filmCart));
+function addFilmToCart(films){ 
+  const filmCart = JSON.parse(localStorage.getItem('filmCart'));
+const filmIndex = filmCart.findIndex(function(currentFilm){
+console.log(currentFilm);
+if(films.id === currentFilm.id ){
+  return true;
+} else{
+  return false;
+}
+})
+
+console.log(filmIndex);
+
+
+
+  filmCart.push(films);
+  localStorage.setItem('filmCart', JSON.stringify(filmCart));
   console.log(filmCart);
 } 
 
-addFilmToCart(productItem);
+addFilmToCart(films);
 
 
