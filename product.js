@@ -26,6 +26,13 @@ function fetchSquareEyesAPI(){
   
   let films = JSON.parse(localStorage.getItem("listOfFilms"))
   
+
+
+
+
+  function addFilmToCart(film){ 
+
+  } 
   
   
   
@@ -68,6 +75,12 @@ ratingImg.src = "https://img.icons8.com/ios-filled/50/rating.png";
 
   const addToCartBtn= document.createElement('button');
   addToCartBtn.textContent = "Add to Cart";
+
+addToCartBtn.addEventListener('click', ()=>{
+  addFilmToCart(film);
+} )
+
+
   
   filmBox.appendChild(filmContent);
   
@@ -77,7 +90,7 @@ ratingBox.append(ratingImg, rating);
   
   filmPriceBox.append(filmPrice);
   
-  buttonBox.append(addToCartBtn)
+  buttonBox.append(addToCartBtn);
   return filmBox;
   }
 
