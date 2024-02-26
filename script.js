@@ -45,7 +45,7 @@ const filmPoster = document.createElement('img');
 filmPoster.src = film.image.url;
 filmPoster.classList.add('film-poster');
 
-const posterLink = document.createElement("a");
+const posterLink = document.createElement('a');
 
 posterLink.href= `/product.html?id=$(film.id)`;
 
@@ -69,7 +69,7 @@ posterLink.appendChild(filmPoster);
 
 filmBox.appendChild(filmContent);
 
-filmContent.append(filmHeader, posterLink, filmPoster, filmPriceBox, infoButton);
+filmContent.append(filmHeader, posterLink, filmPriceBox, infoButton);
 
 filmPriceBox.append(filmPrice);
 

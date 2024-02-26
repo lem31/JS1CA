@@ -1,40 +1,52 @@
 
 
 
-const squareEyesAPI = 'https://v2.api.noroff.dev/square-eyes'
 
 
 
-
-function fetchSquareEyesAPI(){
-  const squareEyesData = async(url) => {
-    try{
-      let response = await fetch(url)
-      let films = await response.json()
-      localStorage.setItem("listOfFilms", JSON.stringify(films.data))
-    } catch(error){
-      console.error("unable to fetch:" + error);
-    }
-  } 
+// function fetchSquareEyesAPI(){
+//   const squareEyesData = async(url) => {
+//     try{
+//       let response = await fetch(url)
+//       let films = await response.json()
+//       localStorage.setItem("listOfFilms", JSON.stringify(films.data))
+//     } catch(error){
+//       console.error("unable to fetch:" + error);
+//     }
+//   } 
   
   
-  squareEyesData(squareEyesAPI); 
-  };
+//   squareEyesData(squareEyesAPI); 
+//   };
   
-  fetchSquareEyesAPI();
+  // fetchSquareEyesAPI();
   
   
   let films = JSON.parse(localStorage.getItem("listOfFilms"))
-
-
-
-  function displayClickedFilm(){
-    const queryString = document.location.search;
-    const params = new URLSearchParams(queryString);
-    const id = params.get("id");};
-    
-    displayClickedFilm();
   
+
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get("id"); // GRABS THE ID FROM THE URL
+
+
+
+
+const squareEyesAPI = "https://v2.api.noroff.dev/square-eyes";
+
+// FETCHES THE MOVIE WITH THE ID
+async function fetchClickedFilm() { 
+  const response = await fetch(`${squareEyesAPI}/${id}`); //ADDS THE ID TO THE URL
+  const films = await response.json();
+  const film = films.data;
+  console.log(film);
+  createFilmsHtml(film); // CALLS THE FUNCTION TO CREATE THE HTML USING THE MOVIE FETCHED FROM THE API
+}
+
+// CALLS THE FUNCTION TO FETCH THE MOVIE
+fetchClickedFilm();
+
+
 
 
   
@@ -85,7 +97,6 @@ addToCartBtn.addEventListener('click', ()=>{
 
 } )
 
-
   
   filmBox.appendChild(filmContent);
   
@@ -104,14 +115,14 @@ ratingBox.append(ratingImg, rating);
 
 
 
-function showProduct(){
- 
-  const productItem = films[0];
-  const filmDisplayBox = document.getElementById('films-display-box');
-  const filmHtml= createFilmsHtml(productItem);
-  filmDisplayBox.appendChild(filmHtml);}
   
-showProduct();
+  // const productItem = films[0];
+  // const filmDisplayBox = document.getElementById('films-display-box');
+  // const filmHtml= createFilmsHtml(productItem);
+  // filmDisplayBox.appendChild(filmHtml);
+
+
+  
 
 
 
