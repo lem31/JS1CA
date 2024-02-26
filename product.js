@@ -27,7 +27,7 @@
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
-const id = params.get("id"); // GRABS THE ID FROM THE URL
+const id = params.get("id"); 
 
 
 
@@ -36,14 +36,14 @@ const squareEyesAPI = "https://v2.api.noroff.dev/square-eyes";
 
 // FETCHES THE MOVIE WITH THE ID
 async function fetchClickedFilm() { 
-  const response = await fetch(`${squareEyesAPI}/${id}`); //ADDS THE ID TO THE URL
+  const response = await fetch(`${squareEyesAPI}/${id}`); 
   const films = await response.json();
   const film = films.data;
   console.log(film);
-  createFilmsHtml(film); // CALLS THE FUNCTION TO CREATE THE HTML USING THE MOVIE FETCHED FROM THE API
+  createFilmsHtml(film); 
 }
 
-// CALLS THE FUNCTION TO FETCH THE MOVIE
+
 fetchClickedFilm();
 
 
