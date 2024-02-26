@@ -47,29 +47,19 @@ filmPoster.classList.add('film-poster');
 
 const posterLink = document.createElement('a');
 
-posterLink.href= `/product.html?id=$(film.id)`;
+posterLink.href= `/product.html?id=${film.id}`;
 
 const filmPriceBox = document.createElement('div');
 
 const filmPrice = document.createElement('div');
 filmPrice.textContent = film.price + "NOK";
 
-const infoButton = document.createElement('button');
-infoButton.classList.add('More-info');
-infoButton.textContent = "More Info";
-
-
-const Button = document.getElementsByTagName("button");
-
-infoButton.addEventListener('click', () => {
-  document.location.href = "product.html";
-})
 
 posterLink.appendChild(filmPoster);
 
 filmBox.appendChild(filmContent);
 
-filmContent.append(filmHeader, posterLink, filmPriceBox, infoButton);
+filmContent.append(filmHeader, posterLink, filmPriceBox);
 
 filmPriceBox.append(filmPrice);
 

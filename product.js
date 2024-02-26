@@ -19,7 +19,7 @@
 //   squareEyesData(squareEyesAPI); 
 //   };
   
-  // fetchSquareEyesAPI();
+//   fetchSquareEyesAPI();
   
   
   let films = JSON.parse(localStorage.getItem("listOfFilms"))
@@ -52,7 +52,7 @@ fetchClickedFilm();
   
   function createFilmsHtml(film){
 
-
+const wrapper = document.getElementById('films-display-box');
   
   const filmBox = document.createElement('div');
     filmBox.classList.add('film-box');
@@ -97,6 +97,7 @@ addToCartBtn.addEventListener('click', ()=>{
 
 } )
 
+wrapper.appendChild(filmBox);
   
   filmBox.appendChild(filmContent);
   
