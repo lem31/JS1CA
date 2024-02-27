@@ -28,8 +28,6 @@ let films = JSON.parse(localStorage.getItem("listOfFilms"))
 
 
 
-
-
 function createFilmsHtml(film){
 
 
@@ -182,7 +180,7 @@ function allFunctions(){
 
 allFunctions();
 
-// localStorage.setItem("productItem", films);
+localStorage.setItem("productItem", films);
 
 
 
