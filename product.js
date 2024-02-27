@@ -1,28 +1,8 @@
 
 
 
-
-
-
-// function fetchSquareEyesAPI(){
-//   const squareEyesData = async(url) => {
-//     try{
-//       let response = await fetch(url)
-//       let films = await response.json()
-//       localStorage.setItem("listOfFilms", JSON.stringify(films.data))
-//     } catch(error){
-//       console.error("unable to fetch:" + error);
-//     }
-//   } 
   
-  
-//   squareEyesData(squareEyesAPI); 
-//   };
-  
-//   fetchSquareEyesAPI();
-  
-  
-  let films = JSON.parse(localStorage.getItem("listOfFilms"))
+let films = JSON.parse(localStorage.getItem("listOfFilms"))
   
 
 const queryString = document.location.search;
@@ -30,25 +10,23 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id"); 
 
 
-
-
 const squareEyesAPI = "https://v2.api.noroff.dev/square-eyes";
 
 
+// FETCH FILM CLICKED ON HOME PAGE
+
 async function fetchClickedFilm() { 
   const response = await fetch(`${squareEyesAPI}/${id}`); 
-  const films = await response.json();
-  const film = films.data;
-  console.log(film);
-  createFilmsHtml(film); 
+  const clickedFilms = await response.json();
+  const clickedFilm = clickedFilms.data;
+  console.log(clickedFilm);
+  createFilmsHtml(clickedFilm); 
 }
 
 
-fetchClickedFilm();
 
 
-
-
+// CREATE FILM HTML
   
   function createFilmsHtml(film){
 
@@ -92,8 +70,7 @@ ratingImg.src = "https://img.icons8.com/ios-filled/50/rating.png";
   addToCartBtn.textContent = "Add to Cart";
 
 addToCartBtn.addEventListener('click', ()=>{
-  addFilmToCart(film);
-
+  addFilmToCart([]);
 
 } )
 
@@ -111,37 +88,26 @@ ratingBox.append(ratingImg, rating);
   return filmBox;
   }
 
-  console.log(films);
+  
   
 
-
-
-  
-  // const productItem = films[0];
-  // const filmDisplayBox = document.getElementById('films-display-box');
-  // const filmHtml= createFilmsHtml(productItem);
-  // filmDisplayBox.appendChild(filmHtml);
-
-
-  
-
-
-
-
+// CREATE FILM CART
 
 function createFilmCart(){
   const filmCart = localStorage.getItem('filmCart');
   if (!filmCart)  { localStorage.setItem('filmCart', JSON.stringify([]))}
 }
 
-createFilmCart();
+
+// ADD FILM(s) to CART
+
 
 
 function addFilmToCart(films){ 
-  const filmCart = JSON.parse(localStorage.getItem('filmCart'));
+const filmCart = JSON.parse(localStorage.getItem('filmCart'));
 const filmIndex = filmCart.findIndex(function(currentFilm){
 console.log(currentFilm);
-if(films.id === currentFilm.id ){
+if(films.id === currentFilm.id){
   return true;
 } else{
   return false;
@@ -149,7 +115,9 @@ if(films.id === currentFilm.id ){
 
 if(filmIndex === -1){
   filmCart.push({...films, quantity: 0});
-}
+} else {
+  filmCart[filmIndex].quantity+=1;
+};
 
 
 console.log(filmIndex);
@@ -161,6 +129,15 @@ console.log(filmIndex);
   console.log(filmCart);
 }
 
-addFilmToCart(films);
 
 
+
+async function allFunctions(){
+
+  fetchClickedFilm();
+  createFilmCart();
+  addFilmToCart(films);
+
+};
+
+allFunctions();
