@@ -66,7 +66,7 @@ ratingImg.src = "https://img.icons8.com/ios-filled/50/rating.png";
   addToCartBtn.textContent = "Add to Cart";
 
 addToCartBtn.addEventListener('click', ()=>{
-  addFilmToCart();
+  addFilmToCart([]);
 
 } )
 
@@ -85,7 +85,10 @@ ratingBox.append(ratingImg, rating);
   }
 
   
-  
+
+
+
+  // CREATE FILM CART
 
   function createFilmCart(){
     const filmCart = localStorage.getItem('filmCart');
@@ -108,6 +111,9 @@ if(films.id === currentFilm.id){
   return false;
 }});
 
+
+
+
 if(filmIndex === -1){
   filmCart.push({...films, quantity: 1});
 } else {
@@ -117,9 +123,8 @@ if(filmIndex === -1){
 
 console.log(filmIndex);
 
-
-
   filmCart.push(films);
+
   localStorage.setItem('filmCart', JSON.stringify(filmCart));
   console.log(filmCart);
 
@@ -130,10 +135,8 @@ console.log(filmIndex);
 
 
 async function allFunctions(){
-
   fetchClickedFilm();
   createFilmCart();
- 
 
 };
 
