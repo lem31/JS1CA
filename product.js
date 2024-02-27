@@ -133,7 +133,7 @@ async function allFunctions(){
 
   fetchClickedFilm();
   createFilmCart();
-  addFilmToCart(films);
+ 
 
 };
 
