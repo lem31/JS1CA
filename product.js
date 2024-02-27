@@ -2,7 +2,7 @@
 
 
   
-let films = JSON.parse(localStorage.getItem("listOfFilms"));
+// let films = JSON.parse(localStorage.getItem("listOfFilms"));
   
 
 const queryString = document.location.search;

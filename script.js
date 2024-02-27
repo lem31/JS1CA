@@ -21,7 +21,7 @@ const squareEyesData = async(url) => {
 squareEyesData(squareEyesAPI); 
 };
 
-fetchSquareEyesAPI();
+
 
 
 let films = JSON.parse(localStorage.getItem("listOfFilms"))
@@ -168,10 +168,17 @@ async function showFilmsByCategory(films) {
 
 
 
-showAllFilms(films);
+function allFunctions(){
 
-showFilmsByCategory(films);
+  fetchSquareEyesAPI();
 
+  showAllFilms(films);
+
+  showFilmsByCategory(films);
+};
+
+
+allFunctions();
 
 // localStorage.setItem("productItem", films);
 
