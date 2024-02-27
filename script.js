@@ -29,7 +29,8 @@ let films = JSON.parse(localStorage.getItem("listOfFilms"))
 
 
 
- function createFilmsHtml(film){
+
+function createFilmsHtml(film){
 
 
 const filmBox = document.createElement('div');
@@ -164,6 +165,7 @@ async function showFilmsByCategory(films) {
     }
   });
 }
+
 
 
 
