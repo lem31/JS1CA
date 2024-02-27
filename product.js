@@ -1,6 +1,4 @@
 
-
-
   
 // let films = JSON.parse(localStorage.getItem("listOfFilms"));
   
@@ -22,8 +20,6 @@ async function fetchClickedFilm() {
   console.log(clickedFilm);
   createFilmsHtml(clickedFilm); 
 }
-
-
 
 
 // CREATE FILM HTML
