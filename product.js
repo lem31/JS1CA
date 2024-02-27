@@ -87,12 +87,11 @@ ratingBox.append(ratingImg, rating);
   
   
 
-// CREATE FILM CART
+  function createFilmCart(){
+    const filmCart = localStorage.getItem('filmCart');
+    if (!filmCart)  { localStorage.setItem('filmCart', JSON.stringify([]))}
+  }
 
-function createFilmCart(){
-  const filmCart = localStorage.getItem('filmCart');
-  if (!filmCart)  { localStorage.setItem('filmCart', JSON.stringify([]))}
-}
 
 
 // ADD FILM(s) to CART
@@ -123,6 +122,8 @@ console.log(filmIndex);
   filmCart.push(films);
   localStorage.setItem('filmCart', JSON.stringify(filmCart));
   console.log(filmCart);
+
+
 }
 
 
