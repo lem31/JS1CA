@@ -66,7 +66,7 @@ ratingImg.src = "https://img.icons8.com/ios-filled/50/rating.png";
   addToCartBtn.textContent = "Add to Cart";
 
 addToCartBtn.addEventListener('click', ()=>{
-  addFilmToCart([]);
+  addFilmToCart();
 
 } )
 

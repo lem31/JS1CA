@@ -1,6 +1,7 @@
 
 
-
+  
+// let films = JSON.parse(localStorage.getItem("listOfFilms"));
 
 function createFilmHtml(film){
 
