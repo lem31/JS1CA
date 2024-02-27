@@ -173,41 +173,9 @@ showAllFilms(films);
 showFilmsByCategory(films);
 
 
-
-localStorage.setItem("productItem", films);
-
+// localStorage.setItem("productItem", films);
 
 
-
-
-// const productItem = films[0];
-// const productHtmlLink = document.createElement('a');
-// productHtmlLink.setAttribute("href", `/product.html?product_id=${films.id}`);
-// const filmImg = document.createElement("img");
-// filmImg.setAttribute("src", films.image.url);
-// productHtmlLink.appendChild(filmImg);
-// productItem.img.src = productItem.image.url;
-
-
-
-
-// function linkToProductPage(){
-
-// const filmDisplayBox = document.getElementById('films-display-box');
-// const productItem = films[0];
-// const productImg = document.createElement('img');
-// productImg.src = productItem.image.url;
-// const productHtmlLink = document.createElement('a');
-// productHtmlLink.href = "product.html";
-// productHtmlLink.textContent= productItem.img;
-// productHtmlLink.appendChild(productImg);
-// filmDisplayBox.appendChild(productHtmlLink);}
-
-
-// linkToProductPage();
-
-
-console.log(films);
 
   
 
