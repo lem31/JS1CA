@@ -48,7 +48,7 @@ filmPoster.classList.add('film-poster');
 
 const posterLink = document.createElement('a');
 
-posterLink.href= `/product.html?id=${film.id}`;
+posterLink.href= `/product.html?id/=${film.id}`;
 
 const filmPriceBox = document.createElement('div');
 
