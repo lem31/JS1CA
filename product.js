@@ -109,7 +109,7 @@ if(films.id === currentFilm.id){
 }});
 
 if(filmIndex === -1){
-  filmCart.push({...films, quantity: 0});
+  filmCart.push({...films, quantity: 1});
 } else {
   filmCart[filmIndex].quantity+=1;
 };
