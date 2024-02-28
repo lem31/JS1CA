@@ -24,7 +24,7 @@ squareEyesData(squareEyesAPI);
 
 
 
-let films = JSON.parse(localStorage.getItem("listOfFilms"))
+let films = JSON.parse(localStorage.getItem("listOfFilms"));
 
 
 

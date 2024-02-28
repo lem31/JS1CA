@@ -14,7 +14,6 @@ const filmContent = document.createElement('div');
   filmContent.classList.add('film-content');
 
 
-
 const filmHeader = document.createElement('h3');
   filmHeader.textContent = film.title; 
 
@@ -26,8 +25,6 @@ const filmPriceBox = document.createElement('div');
 const filmPrice = document.createElement('div');
 filmPrice.textContent = film.price + "NOK";
 
-const filmItemQuantity = document.createElement('div');
-filmItemQuantity.textContent = film.quantity; 
 
 
 filmBox.appendChild(filmContent);
@@ -41,8 +38,6 @@ filmPriceBox.append(filmPrice);
 return filmBox; 
 
 }
-
-
 
 
 
@@ -61,8 +56,12 @@ filmDisplayBox.appendChild(filmHtml);
 
   });
 
+  console.log(filmCart);
+
 };
 
+
+// DISPLAY CHECKOUT TOTAL
 
 function displayCheckoutTotal(){
 
@@ -74,9 +73,38 @@ function displayCheckoutTotal(){
 };
 
 
+// DISPLAY CHECKOUT QUANTITY
+
+function displayCheckoutQuantity(){
+
+
+const filmCart = JSON.parse(localStorage.getItem('filmCart'));
+const filmItemQuantity = document.createElement('div');
+filmItemQuantity.textContent = filmCart.length; 
+const checkoutTotalBox = document.getElementById('Checkout-total-box');
+checkoutTotalBox.appendChild(filmItemQuantity);
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function allFunctions(){
   showFilmCartItems();
   displayCheckoutTotal();
+  displayCheckoutQuantity();
 }
 
 allFunctions();

@@ -3,21 +3,20 @@
 // let films = JSON.parse(localStorage.getItem("listOfFilms"));
  
 
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const id = params.get("id"); 
+// const queryString = document.location.search;
+// const params = new URLSearchParams(queryString);
+// const id = params.get("id"); 
 
 
-const squareEyesAPI = "https://v2.api.noroff.dev/square-eyes";
+// const squareEyesAPI = "https://v2.api.noroff.dev/square-eyes";
 
 
 // FETCH FILM CLICKED ON HOME PAGE
 
 async function fetchClickedFilm() { 
  let clickedFilm = JSON.parse( localStorage.getItem('film'));
-  console.log(clickedFilm);
   createFilmsHtml(clickedFilm); 
-}
+};
 
 
 // CREATE FILM HTML
