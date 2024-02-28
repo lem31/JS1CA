@@ -46,16 +46,17 @@ return filmBox;
 
 
 
-function showFilmCartItems(){
+export function showFilmCartItems(){
 
   const filmDisplayBox = document.getElementById('Films-in-cart');
-
+  console.log(filmDisplayBox);
   const filmCart = JSON.parse(localStorage.getItem('filmCart'));
   if(!filmCart){
     return null;
   }
   filmCart.forEach(function(currentFilm){
 const filmHtml = createFilmHtml(currentFilm);
+console.log(filmDisplayBox);
 filmDisplayBox.appendChild(filmHtml);
 
   });

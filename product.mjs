@@ -1,7 +1,7 @@
 
   
 // let films = JSON.parse(localStorage.getItem("listOfFilms"));
-  
+ 
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -14,9 +14,7 @@ const squareEyesAPI = "https://v2.api.noroff.dev/square-eyes";
 // FETCH FILM CLICKED ON HOME PAGE
 
 async function fetchClickedFilm() { 
-  const response = await fetch(`${squareEyesAPI}/${id}`); 
-  const clickedFilms = await response.json();
-  const clickedFilm = clickedFilms.data;
+ let clickedFilm = JSON.parse( localStorage.getItem('film'));
   console.log(clickedFilm);
   createFilmsHtml(clickedFilm); 
 }
@@ -68,7 +66,7 @@ ratingImg.src = "https://img.icons8.com/ios-filled/50/rating.png";
   addToCartBtn.textContent = "Add to Cart";
 
 addToCartBtn.addEventListener('click', ()=>{
-  addFilmToCart([]);
+  addFilmToCart(film);
 
 } )
 
@@ -96,12 +94,6 @@ ratingBox.append(ratingImg, rating);
 
 
 
-
-
-
-
-
-
   // CREATE FILM CART
 
   function createFilmCart(){
@@ -114,42 +106,32 @@ ratingBox.append(ratingImg, rating);
 // ADD FILM(s) to CART
 
 
-function addFilmToCart(films){ 
+function addFilmToCart(film){ 
 const filmCart = JSON.parse(localStorage.getItem('filmCart'));
-const filmIndex = filmCart.findIndex(function(currentFilm){
-console.log(currentFilm);
-if(films.id === currentFilm.id){
-  return true;
-} else{
-  return false;
-}});
+for (let i=0; i< filmCart.length; i++){
+  if(filmCart[i].title === film.title){
+    alert('Film already in cart');
+    return;
+  }
+}
+filmCart.push(film);
+
+localStorage.setItem('filmCart', JSON.stringify(filmCart));
+
+console.log(filmCart);
 
 
 
-
-if(filmIndex === -1){
-  filmCart.push({...films, quantity: 1});
-} else {
-  filmCart[filmIndex].quantity+=1;
 };
 
 
-console.log(filmIndex);
-
-  filmCart.push(films);
-
-  localStorage.setItem('filmCart', JSON.stringify(filmCart));
-  console.log(filmCart);
-
-
-}
 
 
 
 
 async function allFunctions(){
-  fetchClickedFilm();
-  createFilmCart();
+  await fetchClickedFilm();
+ await createFilmCart();
 
 };
 

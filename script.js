@@ -44,6 +44,10 @@ const filmPoster = document.createElement('img');
 filmPoster.src = film.image.url;
 filmPoster.classList.add('film-poster');
 
+filmPoster.addEventListener('click', () => {
+localStorage.setItem('film', JSON.stringify(film))
+});
+
 const posterLink = document.createElement('a');
 
 posterLink.href= `./product.html?id=${film.id}/`;
@@ -180,7 +184,7 @@ function allFunctions(){
 
 allFunctions();
 
-localStorage.setItem("productItem", films);
+
 
 
 
