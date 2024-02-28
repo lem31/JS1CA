@@ -78,7 +78,7 @@ function displayCheckoutTotal(){
  
     }
 
-    checkoutTotal.textContent = 'Total:' + filmTotal; 
+    checkoutTotal.textContent = 'Total:' + filmTotal.toFixed(2) + 'NOK'; 
 
    checkoutTotalBox.appendChild (checkoutTotal);
   console.log(checkoutTotal);
