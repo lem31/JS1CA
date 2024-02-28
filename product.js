@@ -24,7 +24,7 @@ async function fetchClickedFilm() {
 
 // CREATE FILM HTML
   
-  function createFilmsHtml(film){
+function createFilmsHtml(film){
 
 const wrapper = document.getElementById('films-display-box');
   
@@ -35,6 +35,7 @@ const wrapper = document.getElementById('films-display-box');
     filmContent.classList.add('film-content');
   
   const filmHeader = document.createElement('h3');
+  filmHeader.classList.add('film-header');
     filmHeader.textContent = film.title; 
   
   const filmPoster = document.createElement('img');
@@ -63,6 +64,7 @@ ratingImg.src = "https://img.icons8.com/ios-filled/50/rating.png";
   const buttonBox = document.createElement('div');
 
   const addToCartBtn= document.createElement('button');
+  addToCartBtn.classList.add('Add-to-cart-btn');
   addToCartBtn.textContent = "Add to Cart";
 
 addToCartBtn.addEventListener('click', ()=>{
@@ -84,7 +86,19 @@ ratingBox.append(ratingImg, rating);
   return filmBox;
   }
 
-  
+
+
+// 1. fetch film ID + quantity
+
+// 2. create Html 
+
+// 3. Add to cart 
+
+
+
+
+
+
 
 
 
@@ -98,7 +112,6 @@ ratingBox.append(ratingImg, rating);
 
 
 // ADD FILM(s) to CART
-
 
 
 function addFilmToCart(films){ 
