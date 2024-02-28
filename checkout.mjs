@@ -1,8 +1,9 @@
 
 
   
-// let films = JSON.parse(localStorage.getItem("listOfFilms"));
+let films = JSON.parse(localStorage.getItem("listOfFilms"));
 
+console.log(films)
 
 
 function createFilmHtml(film){
@@ -64,12 +65,21 @@ filmDisplayBox.appendChild(filmHtml);
 // DISPLAY CHECKOUT TOTAL
 
 function displayCheckoutTotal(){
-
   const filmCart = JSON.parse(localStorage.getItem('filmCart'));
   const checkoutTotalBox = document.getElementById('Checkout-total-box');
   const checkoutTotal = document.createElement('div');
-  checkoutTotal.textContent = 'Total:' + filmCart.price * filmCart.quantity; 
-  checkoutTotalBox.appendChild (checkoutTotal);
+
+
+  for (let i=0; i< filmCart.length; i++){
+    let filmPrice = filmCart[i].price * filmCart.length;
+
+  checkoutTotal.textContent = 'Total:' + filmPrice; 
+
+ 
+    }
+
+    checkoutTotalBox.appendChild (checkoutTotal);
+  console.log(checkoutTotal);
 };
 
 
