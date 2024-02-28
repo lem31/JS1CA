@@ -26,19 +26,52 @@ const filmPriceBox = document.createElement('div');
 const filmPrice = document.createElement('div');
 filmPrice.textContent = film.price + "NOK";
 
+const removeButtonBox = document.createElement('div');
 
+const removeButton = document.createElement('Button');
+removeButton.classList.add('remove-film-btn')
+removeButton.textContent = 'Remove from cart'
+
+
+
+removeButton.addEventListener('click', ()=>{
+removeFilmFromCart();
+ })
+
+
+
+
+
+removeButtonBox.appendChild(removeButton)
 
 filmBox.appendChild(filmContent);
   
-filmContent.append(filmHeader, filmPoster);
+filmContent.append(filmHeader, filmPoster, removeButtonBox);
 
 filmPriceBox.append(filmPrice);
 
 
-
 return filmBox; 
 
-}
+};
+
+
+
+
+
+function removeFilmFromCart(){
+
+  const filmCart = JSON.parse(localStorage.getItem('filmCart'));
+  
+  for (let i=0; i< filmCart.length; i++){
+    if(filmCart[i].length > 0) {
+
+  
+    }
+  }};
+
+
+
 
 
 
@@ -86,7 +119,7 @@ function displayCheckoutTotal(){
 
 
 
- // Initialize the total outside the loop
+
 
 
 
@@ -104,14 +137,6 @@ checkoutTotalBox.appendChild(filmItemQuantity);
 
 
 };
-
-
-
-
-
-
-
-
 
 
 
