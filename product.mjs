@@ -110,7 +110,7 @@ function addFilmToCart(film){
 const filmCart = JSON.parse(localStorage.getItem('filmCart'));
 for (let i=0; i< filmCart.length; i++){
   if(filmCart[i].title === film.title){
-    alert('Film already in cart');
+    alert('Film already added to cart');
     return;
   }
 }
@@ -119,8 +119,6 @@ filmCart.push(film);
 localStorage.setItem('filmCart', JSON.stringify(filmCart));
 
 console.log(filmCart);
-
-
 
 };
 
