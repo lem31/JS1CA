@@ -69,18 +69,26 @@ function displayCheckoutTotal(){
   const checkoutTotalBox = document.getElementById('Checkout-total-box');
   const checkoutTotal = document.createElement('div');
 
+  let filmTotal = 0;
 
   for (let i=0; i< filmCart.length; i++){
-    let filmPrice = filmCart[i].price * filmCart.length;
 
-  checkoutTotal.textContent = 'Total:' + filmPrice; 
+    filmTotal += filmCart[i].price;
 
  
     }
 
-    checkoutTotalBox.appendChild (checkoutTotal);
+    checkoutTotal.textContent = 'Total:' + filmTotal; 
+
+   checkoutTotalBox.appendChild (checkoutTotal);
   console.log(checkoutTotal);
 };
+
+
+
+ // Initialize the total outside the loop
+
+
 
 
 // DISPLAY CHECKOUT QUANTITY
