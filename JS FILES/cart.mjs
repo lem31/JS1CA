@@ -45,16 +45,9 @@ removeButton.classList.add('remove-film-btn')
 removeButton.textContent = 'Remove from cart'
 
 removeButton.addEventListener('click', ()=>{
-const filmCart = JSON.parse(localStorage.getItem('filmCart'));
-const filmIDToRemove = filmCart.id;
-if (filmIDToRemove !== -1){
-  filmCart.splice(filmIDToRemove, 1);
-  };
 
-location.reload(true);
-localStorage.setItem('filmCart', JSON.stringify(filmCart));
-
- });
+removeFilmFromCart(film);
+});
 
 
 removeButtonBox.appendChild(removeButton)
@@ -72,6 +65,22 @@ return filmBox;
 };
 
 
+// REMOVE FILM FROM CART
+
+function removeFilmFromCart(film) {
+
+  const filmCart = JSON.parse(localStorage.getItem('filmCart'));
+  for (let i=0; i< filmCart.length; i++){
+   
+  filmCart.splice(film);
+  
+  localStorage.setItem('filmCart', JSON.stringify(filmCart));
+  
+  location.reload(true);
+  
+  };};
+
+  // DISPLAY FILM CART ITEMS 
 
 export function showFilmCartItems(){
 
