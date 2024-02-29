@@ -10,11 +10,3 @@ import { displayCheckoutQuantity } from "./cart.mjs";
 
 
 
-
-function allFunctions(){
-  showFilmCartItems();
-  displayCheckoutTotal();
-  displayCheckoutQuantity();
-}
-
-allFunctions();
