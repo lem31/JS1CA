@@ -140,7 +140,7 @@ export function displayCheckoutQuantity(){
 const filmCart = JSON.parse(localStorage.getItem('filmCart'));
 const filmItemQuantity = document.createElement('div');
 filmItemQuantity.classList.add('film-quantity-box');
-filmItemQuantity.textContent = filmCart.length; 
+filmItemQuantity.textContent = 'Quantity:'+filmCart.length; 
 const checkoutTotalBox = document.getElementById('cart-total-box');
 checkoutTotalBox.appendChild(filmItemQuantity);
 
@@ -149,8 +149,9 @@ checkoutTotalBox.appendChild(filmItemQuantity);
 
 function allFunctions(){
   showFilmCartItems();
-  displayCheckoutTotal();
   displayCheckoutQuantity();
+  displayCheckoutTotal();
+ 
 }
 
 allFunctions();
