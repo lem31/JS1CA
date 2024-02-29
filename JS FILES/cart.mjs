@@ -50,6 +50,7 @@ removeFilmFromCart(film);
 });
 
 
+
 removeButtonBox.appendChild(removeButton)
 
 filmBox.appendChild(filmContent);
@@ -69,16 +70,24 @@ return filmBox;
 
 function removeFilmFromCart(film) {
 
-  const filmCart = JSON.parse(localStorage.getItem('filmCart'));
-  for (let i=0; i< filmCart.length; i++){
-   
-  filmCart.splice(film);
+  let filmCart = JSON.parse(localStorage.getItem('filmCart'));
+ 
+   for(let i=0; i< filmCart.length; i++){
+    if(filmCart[i].id === film.id){
+      filmCart.splice(i, 1);
+      console.log(filmCart);
+    
+      localStorage.setItem('filmCart', JSON.stringify(filmCart));
   
-  localStorage.setItem('filmCart', JSON.stringify(filmCart));
+      showFilmCartItems();
+
+      location.reload(true);
+    }
+   }
   
-  location.reload(true);
   
-  };};
+  
+  };
 
   // DISPLAY FILM CART ITEMS 
 
@@ -115,7 +124,6 @@ export function displayCheckoutTotal(){
 
     filmTotal += filmCart[i].price;
 
- 
     }
 
     checkoutTotal.textContent = 'Total:' + filmTotal.toFixed(2) + 'NOK'; 
