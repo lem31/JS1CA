@@ -83,7 +83,7 @@ function removeFilmFromCart(film) {
 
       location.reload(true);
     }
-   }
+   };
   
   
   
