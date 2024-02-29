@@ -124,8 +124,6 @@ console.log(filmCart);
 
 
 
-
-
 async function allFunctions(){
   await fetchClickedFilm();
  await createFilmCart();
