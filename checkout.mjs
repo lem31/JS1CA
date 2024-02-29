@@ -39,8 +39,7 @@ const filmCart = JSON.parse(localStorage.getItem('filmCart'));
 const filmIDToRemove = filmCart.id;
 if (filmIDToRemove !== -1){
   filmCart.splice(filmIDToRemove, 1);
-  
-}
+  };
 
 location.reload(true);
 localStorage.setItem('filmCart', JSON.stringify(filmCart));
