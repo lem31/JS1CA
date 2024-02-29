@@ -35,7 +35,8 @@ removeButton.textContent = 'Remove from cart'
 
 
 removeButton.addEventListener('click', ()=>{
-removeFilmFromCart();
+const filmItem = filmContent;
+filmItem.remove();
  })
 
 
@@ -59,16 +60,7 @@ return filmBox;
 
 
 
-function removeFilmFromCart(){
 
-  const filmCart = JSON.parse(localStorage.getItem('filmCart'));
-  
-  for (let i=0; i< filmCart.length; i++){
-    if(filmCart[i].length > 0) {
-
-  
-    }
-  }};
 
 
 
