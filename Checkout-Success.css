@@ -1,0 +1,1604 @@
+/* VARIABLES */
+
+:root {
+  --Purple-Color: #9747ff;
+  --Linear-Purple-Color: linear-gradient(180deg, #aa47ff 0%, #0f3b70 100%);
+  --Base-Blue-Color: #0f3b70;
+  --Yellow-Color: #e6ff4b;
+  --White-Text-Color: #ffffff;
+  --Primary-Font: "Amaranth", "open sans";
+  --Secondary-Font: "Open Sans", "sans-serif";
+  --Background-Black: #000000;
+}
+
+/* GLOBAL STYLES */
+body,
+main,
+header,
+nav a,
+footer,
+.Container-1,
+.Container-4,
+.Header-text-box,
+.Checkout-success-page,
+#search-icon-button,
+.cart-icon,
+.cat-img-box {
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
+}
+
+.SquareEyes-logo,
+.square-eyes-logo-box,
+.Search-Cart-box,
+nav a {
+  position: static;
+  width: 100%;
+}
+
+.Container-1,
+.square-eyes-logo-box,
+.SMI-img-box,
+.footer-links-box {
+  display: flex;
+  flex-direction: row;
+}
+
+#hamburger,
+#mobile-checkbox,
+#mobile-checkbox:checked ~ nav {
+  display: none;
+}
+
+body,
+main {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.Container-1,
+.Container-4 {
+  background: var(--Linear-Purple-Color);
+}
+
+.Container-3,
+.About-Us,
+.Contact-Page,
+.Product-1-Page,
+.Product-2-Page,
+.Cart-Page,
+.Checkout-page,
+main {
+  background-color: var(--Base-Blue-Color);
+}
+
+.delivery-form-wrapper,
+.Card-details-form-wrapper,
+.Checkout-success-box,
+.img-bg-box,
+.Buy-btn,
+.View-btn,
+.Buy-btn-Product-2,
+.View-btn-Product-2,
+.img-bg-box-Product-2,
+nav a,
+#search-box {
+  background-color: var(--Background-Black);
+}
+
+.Return-to-cart-btn {
+  background-color: var(--Purple-Color);
+}
+
+.h1-home,
+.h2-home,
+.h1-Films,
+.h2-Films,
+.Header-text-box p,
+.h1-about,
+.h2-contact-box,
+.h1-contact,
+.Contact-Label,
+.Contact-input,
+.The-Batman-span,
+.H1-Cart,
+.Item-num,
+.P-Empty-Cart,
+.Subtotal-total-box,
+.h1-checkout,
+.h2-checkout,
+.h3-checkout,
+.h4-checkout {
+  color: var(--White-Text-Color);
+  font-family: var(--Primary-Font);
+}
+
+.Film-text-Product-Page-1,
+.Continue-Browsing-btn,
+.checkout-text,
+.Film-text-Product-Page-2,
+.Film-text-Product-Page-1 {
+  font-family: var(--Secondary-Font);
+  color: var(--White-Text-Color);
+}
+
+.word-here,
+.Checkout-btn,
+.Buy-btn,
+.View-btn,
+.Watch-now,
+.films,
+.word-about-us-page,
+.Buy-btn-Product-2,
+.View-btn-Product-2 {
+  color: var(--Yellow-Color);
+}
+
+#h1-Films,
+.h1-about,
+.h1-contact {
+  font-size: 2rem;
+}
+
+.active-page {
+  background-color: #6a6a6a;
+  border: none;
+}
+
+body,
+main {
+  width: 100%;
+  height: 100%;
+}
+
+/* HEADER & NAV */
+
+.Container-1 {
+  flex: 0 0 0px;
+  align-content: center;
+  justify-content: center;
+  min-height: 100px;
+  max-height: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  max-height: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.square-eyes-logo-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.SquareEyes-logo {
+  width: 8rem;
+  height: 5.5rem;
+  filter: drop-shadow(0.1rem 0.1rem white);
+  z-index: 10;
+  position: static;
+}
+
+nav {
+  display: inline-flex;
+  flex-direction: row;
+  position: static;
+  align-self: center;
+  justify-content: center;
+  white-space: nowrap;
+  z-index: 10;
+  width: 100%;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem 0.3rem 1rem 0.3rem;
+  margin-left: 0.3rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  min-width: 8rem;
+  max-width: 10rem;
+  text-align: center;
+  text-justify: center;
+}
+
+nav a:hover {
+  background-color: #a6a6a6;
+  border-color: #a6a6a6;
+}
+
+.Search-Cart-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax 100px);
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "GAP GAP"
+    "search cart"
+    "box box";
+  column-gap: 0;
+  width: 100%;
+  min-width: 8rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  margin-left: -2rem;
+}
+
+#search-icon-button,
+.cart-icon {
+  max-width: 4rem;
+  max-height: 4rem;
+}
+
+#search-icon-button {
+  grid-area: search;
+  align-self: center;
+  justify-self: end;
+}
+
+.cart-icon {
+  grid-area: cart;
+  align-self: center;
+}
+
+#search-checkbox {
+  display: none;
+}
+
+#search-checkbox:checked ~ #search-box {
+  display: block;
+}
+
+.Search-form {
+  grid-area: search;
+}
+
+#search-box {
+  display: none;
+  grid-area: box;
+  z-index: 10;
+  position: absolute;
+  color: var(--White-Text-Color);
+  border: 10px solid #9747ff;
+  min-width: 30rem;
+  max-width: 30rem;
+  min-height: 8vh;
+  max-height: 8vh;
+  padding: 8px 60px;
+  justify-self: start;
+  margin-top: 1.5rem;
+  margin-left: -30rem;
+}
+
+/* HOME PAGE */
+
+.Container-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "H11 H12 H13 H14";
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  z-index: 9;
+  margin: 0;
+}
+
+.The-Batman-img {
+  height: auto;
+  width: 100%;
+  z-index: 9;
+  margin: 0;
+  overflow: hidden;
+}
+
+.The-Batman-img-box {
+  display: flex;
+  width: 100%;
+  height: auto;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  z-index: 9;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.The-Batman-box-elements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: repeat(2 auto);
+  grid-template-areas:
+    "H1 Gap1 Gap"
+    "H2 GAP WN";
+  justify-content: center;
+  max-width: 60vw;
+  height: 100vh;
+  grid-gap: 7rem;
+  position: absolute;
+  z-index: 9;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.h1-home-box {
+  grid-area: H1;
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  justify-content: center;
+}
+
+.h1-home {
+  display: flex;
+  flex-direction: row;
+  z-index: 12;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: left;
+  white-space: nowrap;
+  width: 200px;
+  justify-self: center;
+  flex-grow: 1;
+}
+
+.h1-home a {
+  text-decoration: none;
+}
+
+.h2-home-box {
+  grid-area: H1;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  justify-content: center;
+  align-items: end;
+  height: 35vh;
+  width: 500px;
+  text-wrap: nowrap;
+}
+
+.h2-home {
+  grid-area: H1;
+  font-size: 3rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 480px;
+  position: static;
+}
+
+.WN-box {
+  grid-area: Gap;
+  max-width: 500px;
+  width: 20vw;
+  height: 30vh;
+  z-index: 10;
+  align-items: start;
+  justify-content: end;
+}
+
+.Watch-now {
+  grid-area: Gap;
+  text-decoration: none;
+  font-size: 2.8rem;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.31410984848484846) 40%
+  );
+  border: 0.1px black;
+  border-radius: 10rem 10rem 10rem 10rem;
+  padding: 50px 50px 50px 20px;
+  filter: drop-shadow(0rem 0.5rem rgb(0, 0, 0));
+  transform: rotate(-10deg);
+  z-index: 10;
+  height: 260px;
+  max-width: 260px;
+  position: static;
+  overflow: hidden;
+  width: inherit;
+  white-space: nowrap;
+}
+
+.Watch-now:hover {
+  background: rgba(0, 0, 0, 0.26);
+}
+
+.Container-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas:
+    "Title Gap"
+    "Carousel Carousel";
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+  overflow: hidden;
+}
+
+h3 {
+  grid-area: Title;
+  color: white;
+  font-family: "Amaranth", sans-serif;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.carousel {
+  grid-area: Carousel;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
+}
+
+.carousel img {
+  width: 15rem;
+  margin: 0;
+  filter: drop-shadow(0.7rem 0.7rem black);
+  overflow-y: hidden;
+}
+
+.Right-chevron-box {
+  display: none;
+}
+
+/* FOOTER */
+
+.Container-4 {
+  max-height: 240px;
+  overflow: hidden;
+  z-index: 8;
+}
+
+footer {
+  z-index: 8;
+  overflow: hidden;
+}
+
+.footer-content-box {
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  max-height: 50rem;
+  z-index: 8;
+}
+
+.SMI-img-box {
+  width: 100%;
+  justify-content: center;
+}
+
+footer img {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.footer-links-box {
+  justify-content: center;
+  width: 100%;
+}
+
+.Footer-Links a {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.line {
+  margin-left: 0.2rem;
+}
+
+/*  SMALL SCREEN MOBILE MEDIA QUERIES */
+
+@media (max-width: 500px) {
+  /* HEADER */
+
+  .Container-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-template-areas: "Hamburger Logo Search-Cart";
+    justify-items: center;
+    align-items: center;
+    gap: 0;
+    min-height: 100px;
+    max-height: 100px;
+  }
+
+  .square-eyes-logo-box {
+    justify-content: center;
+    width: 190px;
+  }
+
+  .SquareEyes-logo {
+    grid-area: Logo;
+    max-width: 100px;
+    max-height: 60px;
+    margin-top: 0.5rem;
+    align-self: center;
+    justify-self: end;
+  }
+
+  nav {
+    display: none;
+    grid-area: Hamburger;
+    width: 8rem;
+    background-color: black;
+    position: inherit;
+    max-height: 50px;
+    max-width: 100px;
+    min-width: 100px;
+    margin-top: 6rem;
+    margin-left: 5.2rem;
+    float: left;
+  }
+
+  nav a {
+    display: block;
+    justify-content: center;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-size: 1.5rem;
+    position: static;
+    margin: auto;
+  }
+
+  nav a:hover {
+    border: 4px solid purple;
+  }
+
+  #hamburger {
+    grid-area: Hamburger;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 1rem;
+    position: static;
+    align-self: center;
+    justify-self: center;
+  }
+
+  #mobile-checkbox:checked ~ nav {
+    display: block;
+  }
+
+  .Search-Cart-box {
+    grid-column-gap: 0;
+    grid-template-rows: 1fr 2fr 0fr;
+    margin-left: 0;
+  }
+
+  #search-box {
+    min-width: 20rem;
+    max-width: 20rem;
+    margin-left: -15rem;
+    margin-top: 1rem;
+  }
+
+  .search-icon,
+  .cart-icon {
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    position: static;
+  }
+
+  /* HOME PAGE */
+
+  .The-Batman-box-elements {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-areas:
+      "H1 WN GAP3"
+      "H2 GAP1 GAP2";
+    width: 100vw;
+    height: 35vh;
+    grid-gap: 1.5rem;
+  }
+
+  .h1-home-box {
+    grid-area: H1;
+  }
+
+  .h1-home {
+    font-size: 0.6rem;
+  }
+
+  .h2-home-box {
+    grid-area: H1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 140px;
+    width: 800px;
+    position: static;
+  }
+
+  .h2-home {
+    grid-area: H1;
+    font-size: 1.2rem;
+    position: relative;
+  }
+
+  .WN-box {
+    grid-area: WN;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .Watch-now {
+    grid-area: WN;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0px 0px 0px 0px;
+    filter: drop-shadow(0rem 0.2rem rgb(0, 0, 0));
+    width: 90px;
+    height: 90px;
+  }
+
+  .Container-3 {
+    height: 400px;
+  }
+
+  .carousel {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overscroll-behavior-inline: none;
+    max-width: 500px;
+    z-index: 7;
+  }
+
+  .carousel img {
+    width: 100%;
+    max-width: 8rem;
+    filter: drop-shadow(0.4rem 0.2rem black);
+    overflow-x: hidden;
+    position: static;
+    z-index: 7;
+  }
+
+  .Right-chevron {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 8;
+  }
+
+  .Chevron-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 80px;
+    width: 80px;
+    margin: auto;
+  }
+
+  .Right-chevron-box {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 8;
+    margin-top: -7rem;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .Faith {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .Fun-Treasure,
+  .Vulture,
+  #PowerPuffFlowers,
+  .Learning-TFIL {
+    display: none;
+  }
+
+  .h3-home {
+    font-size: 1rem;
+  }
+
+  /* FOOTER */
+
+  .Footer-Links a {
+    font-size: 0.7rem;
+  }
+
+  .Container-4,
+  footer {
+    max-height: 110px;
+  }
+
+  .footer-content-box {
+    height: 10rem;
+    max-height: 10rem;
+    row-gap: 0.5rem;
+  }
+
+  footer img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  /* FILMS PAGE */
+
+  .All-films-images {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
+    row-gap: 0;
+    max-width: 313px;
+  }
+
+  .Film-cat-row-3 {
+    column-gap: 3.5rem;
+    max-width: 345px;
+  }
+
+  .Film-cat-row-1,
+  .Film-cat-row-2,
+  .Film-cat-row-4,
+  .Film-cat-row-5 {
+    position: static;
+    max-width: 345px;
+    width: 100%;
+    align-self: center;
+  }
+
+  .All-films-poster {
+    width: 75px;
+    height: 107px;
+  }
+
+  .Films-Categories-img {
+    width: 55px;
+    height: 87px;
+  }
+
+  .Films-Categories-box {
+    padding-top: 4rem;
+  }
+
+  .header-films-page {
+    font-size: 0.8rem;
+  }
+
+  #h1-Films {
+    font-size: 1.2rem;
+    max-width: 48px;
+  }
+
+  /* ABOUT US PAGE */
+
+  .About-Us {
+    min-height: 20rem;
+    max-height: 70vh;
+    margin: 0;
+  }
+
+  .Header-text-box p {
+    font-size: 1rem;
+    width: 200px;
+  }
+
+  .P-About-box {
+    max-height: 60vh;
+  }
+
+  /* CONTACT PAGE */
+
+  .h1-contact {
+    font-size: 1.5rem;
+    max-width: 6rem;
+    width: 100%;
+  }
+
+  .h2-contact-box {
+    width: 100%;
+    max-width: 17.5rem;
+  }
+
+  .h2-contact {
+    width: 100%;
+    max-width: 20rem;
+    font-size: 1.2rem;
+    justify-content: start;
+  }
+
+  .Name-labels-box {
+    flex-direction: column;
+    width: 15rem;
+    gap: 1rem;
+  }
+
+  .Email-message-boxes {
+    width: 3.5rem;
+  }
+
+  #Email-input {
+    width: 10rem;
+  }
+
+  #message-label {
+    text-wrap: nowrap;
+  }
+
+  #Your-message {
+    width: 9rem;
+    height: 2rem;
+  }
+
+  .contact-box {
+    width: 18rem;
+    height: 30rem;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 280px;
+  }
+
+  /* PRODUCT PAGE 1 */
+
+  .img-bg-box {
+    width: 100vw;
+    min-width: 300px;
+    height: 30rem;
+  }
+
+  .Batman-img-Product-Page {
+    width: 250px;
+    height: 350px;
+  }
+
+  .Product-1-text-box {
+    height: 390px;
+    width: 300px;
+    align-items: center;
+  }
+  .Film-text-Product-Page-1 {
+    font-size: 1rem;
+  }
+
+  .The-Batman-span {
+    font-size: 1.5rem;
+  }
+
+  /* PRODUCT PAGE 2 */
+
+  .img-bg-box-Product-2 {
+    width: 100vw;
+    min-width: 300px;
+    height: 30rem;
+  }
+
+  .TS4-img-Product-Page-2 {
+    width: 250px;
+    height: 350px;
+    opacity: 0.5;
+  }
+
+  .Product-2-text-box {
+    width: 200px;
+    height: 400px;
+  }
+
+  .TS4-span {
+    font-size: 1.5rem;
+  }
+
+  .Film-text-Product-Page-2 {
+    font-size: 0.8rem;
+  }
+
+  /* CART PAGE */
+
+  .Header-box {
+    max-width: 50vw;
+    min-width: 500px;
+  }
+
+  .Item-num-box {
+    width: 70vw;
+  }
+
+  .H1-Cart {
+    max-width: 30vw;
+  }
+
+  .Item-num {
+    max-width: 30vw;
+    width: 200px;
+    font-size: 1.2rem;
+  }
+
+  .Empty-Cart-Box {
+    height: 130px;
+  }
+
+  .Subtotal-total-box {
+    height: 350px;
+  }
+
+  .Checkout-btn-box {
+    min-height: 300px;
+  }
+
+  /* CHECKOUT PAGE */
+
+  main {
+    min-height: 750px;
+    overflow-x: hidden;
+  }
+
+  .Checkout-page {
+    min-height: 1800px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 10rem;
+  }
+
+  .Checkout-wrapper-1 {
+    display: grid;
+    grid-template-columns: 2fr 0fr 2fr;
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas:
+      "H1 Gap Gap1"
+      "H2 Gap3 Gap4"
+      "Gap5 Gap6 Btn"
+      "H3 Gap7 Gap8"
+      "DForm Gap9 Gap10"
+      "H4 Gap11 Gap12"
+      "PForm Gap13 Gap14";
+    min-width: 250px;
+    max-width: 100vw;
+    max-height: 100vh;
+    justify-items: center;
+    column-gap: 0;
+  }
+
+  .h1-h2-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .delivery-form-wrapper {
+    min-width: 180px;
+    max-width: 180px;
+  }
+
+  .Checkout-Input {
+    min-width: 165px;
+  }
+
+  .Card-details-form-wrapper {
+    padding: 2rem 5rem 2rem 5rem;
+  }
+
+  .Card-details-form {
+    max-width: 30vw;
+    min-width: 30vw;
+  }
+
+  #Card-num,
+  #Cardholder-name {
+    width: 30vw;
+  }
+
+  .Expiry-CVV-row {
+    gap: 1rem;
+  }
+
+  #Expiry,
+  #CVV {
+    width: 8.5vw;
+  }
+
+  #Cardholder-name-label,
+  #Card-num-label {
+    text-wrap: nowrap;
+  }
+
+  .h2-checkout {
+    height: 200px;
+  }
+
+  .h1-checkout,
+  .h2-checkout {
+    justify-self: start;
+    padding-left: 1rem;
+  }
+
+  .Return-to-cart-btn {
+    grid-area: Btn;
+  }
+
+  .Return-to-cart-btn-wrapper {
+    grid-area: Btn;
+    margin-left: -6.5rem;
+  }
+
+  .h3-checkout-box {
+    margin-left: 1rem;
+    position: static;
+  }
+
+  /* CHECKOUT SUCCESS PAGE */
+
+  .Checkout-success-box {
+    min-width: 120px;
+    max-width: 100vw;
+    min-height: 60vh;
+    max-height: 80vh;
+  }
+
+  .checkout-text {
+    font-size: 1rem;
+  }
+}
+
+/* LARGE SCREEN MOBILE + TABLET MEDIA QUERIES */
+
+@media (min-width: 501px) and (max-width: 908px) {
+  /* HEADER */
+
+  .Container-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-areas: "Hamburger Logo Search-Cart";
+    justify-items: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .square-eyes-logo-box {
+    width: 120px;
+  }
+
+  .SquareEyes-logo {
+    grid-area: Logo;
+    max-width: 140px;
+    max-height: 70px;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  nav {
+    display: none;
+    grid-area: Hamburger;
+    width: 8rem;
+    position: inherit;
+    max-height: 50px;
+    max-width: 100px;
+    min-width: 100px;
+    margin-top: 6rem;
+    margin-left: 5.2rem;
+    float: left;
+  }
+
+  nav a {
+    display: block;
+    justify-content: center;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-size: 1.5rem;
+    position: static;
+    margin: auto;
+  }
+
+  nav a:hover {
+    border: 4px solid purple;
+  }
+
+  #hamburger {
+    grid-area: Hamburger;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 1rem;
+    position: relative;
+    align-self: center;
+    justify-self: center;
+  }
+
+  #mobile-checkbox:checked ~ nav {
+    display: block;
+  }
+
+  .Search-Cart-box {
+    grid-column-gap: 1.5rem;
+    grid-template-rows: 1fr 2fr 0fr;
+  }
+
+  #search-box {
+    min-width: 25rem;
+    max-width: 25rem;
+    margin-left: -18rem;
+    margin-top: 0.8rem;
+  }
+
+  .search-icon,
+  .cart-icon {
+    max-width: 2.8rem;
+    max-height: 2.8rem;
+  }
+
+  /* HOME PAGE */
+
+  .The-Batman-img {
+    height: auto;
+    width: 100%;
+    z-index: 8;
+    margin: 0;
+    z-index: 8;
+  }
+
+  .The-Batman-box-elements {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-areas:
+      "H1 WN GAP3"
+      "H2 GAP1 GAP2";
+    grid-gap: 1rem;
+    max-width: 20vw;
+  }
+
+  .h1-home {
+    font-size: 0.8rem;
+  }
+
+  .h1-home-box {
+    grid-area: H1;
+  }
+
+  .h2-home {
+    font-size: 1.5rem;
+  }
+
+  .h2-home-box {
+    display: flex;
+    flex-direction: column;
+    width: 530px;
+    height: 120px;
+    justify-content: end;
+  }
+
+  .WN-box {
+    grid-area: WN;
+    display: flex;
+    justify-content: end;
+    /* margin: 0 auto;
+    left: 0;
+    right: 0; */
+    width: 30vw;
+  }
+
+  .Watch-now {
+    grid-area: WN;
+    width: 130px;
+    height: 130px;
+    position: static;
+    overflow: hidden;
+    font-size: 1.2rem;
+  }
+
+  .Container-3 {
+    height: 500px;
+    z-index: 8;
+    position: static;
+  }
+
+  .h3-home {
+    font-size: 1.3rem;
+  }
+
+  .carousel {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overscroll-behavior-inline: none;
+    max-width: 900px;
+    position: static;
+    margin: 0;
+  }
+
+  .carousel img {
+    width: 100%;
+    max-width: 13.5rem;
+    filter: drop-shadow(0.4rem 0.2rem black);
+    overflow-x: hidden;
+    position: static;
+    margin: 0;
+  }
+
+  .Fun-Treasure,
+  .Vulture,
+  #PowerPuffFlowers,
+  .Learning-TFIL {
+    display: none;
+  }
+
+  .Faith {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    max-height: 100vh;
+    min-height: 40rem;
+  }
+
+  .Right-chevron {
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    z-index: 8;
+  }
+
+  .Chevron-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 300px;
+    width: 80px;
+    margin: auto;
+    position: static;
+  }
+
+  .Right-chevron-box {
+    height: 200px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    z-index: 8;
+    position: absolute;
+    overflow: hidden;
+    margin-top: -15rem;
+  }
+
+  /* FOOTER */
+
+  .Footer-Links a {
+    font-size: 0.7rem;
+  }
+
+  .Container-4 {
+    max-height: 140px;
+  }
+
+  .footer-content-box {
+    max-height: 10rem;
+    row-gap: 0.5rem;
+  }
+
+  footer img {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  /* FILMS PAGE */
+
+  .All-films-images {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
+    row-gap: 0;
+    max-width: 400px;
+  }
+
+  .All-films-poster {
+    width: 100px;
+    height: 140px;
+  }
+
+  .Film-cat-row-3 {
+    column-gap: 2rem;
+    max-width: 430px;
+  }
+
+  .Film-cat-row-1,
+  .Film-cat-row-2,
+  .Film-cat-row-4,
+  .Film-cat-row-5 {
+    position: static;
+    max-width: 432px;
+    width: 100%;
+    align-self: center;
+  }
+
+  .Films-Categories-img {
+    max-width: 100px;
+    height: 140px;
+    position: static;
+  }
+
+  .header-films-page {
+    font-size: 1rem;
+  }
+
+  #h1-Films {
+    font-size: 1.5rem;
+    max-width: 98px;
+  }
+
+  /* ABOUT US PAGE */
+
+  .About-Us {
+    min-height: 30rem;
+    max-height: 70vh;
+    margin: 0;
+  }
+
+  .h1-about {
+    display: flex;
+    flex-direction: row;
+    width: 140px;
+    justify-content: end;
+    text-wrap: nowrap;
+  }
+
+  .About-img-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    max-width: 28rem;
+  }
+  .About-img {
+    width: 25rem;
+  }
+
+  .Header-text-box p {
+    font-size: 1.2rem;
+  }
+
+  .P-About-box {
+    max-width: 400px;
+  }
+
+  .Header-text-box {
+    width: 400px;
+  }
+
+  /* CONTACT PAGE */
+
+  .h2-contact-box {
+    width: 32.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .h2-contact {
+    width: 16rem;
+  }
+
+  .Name-labels-box {
+    flex-direction: column;
+    width: 15rem;
+    gap: 1rem;
+  }
+
+  .contact-box {
+    width: 30rem;
+    height: 38rem;
+  }
+
+  /* PRODUCT PAGE 1 */
+
+  .img-bg-box {
+    width: 100vw;
+    min-width: 450px;
+    height: 40rem;
+  }
+
+  /* PRODUCT PAGE 2 */
+
+  .img-bg-box-Product-2 {
+    min-width: 450px;
+  }
+
+  .Product-2-text-box {
+    height: 370px;
+    width: 290px;
+  }
+
+  /* CART PAGE */
+
+  .Header-box {
+    max-width: 100vw;
+    min-width: 500px;
+  }
+
+  .Item-num-box {
+    width: 70vw;
+  }
+
+  .H1-Cart {
+    max-width: 30vw;
+  }
+
+  .Item-num {
+    max-width: 30vw;
+    width: 200px;
+    font-size: 1.2rem;
+  }
+
+  .Empty-Cart-Box {
+    height: 130px;
+  }
+
+  .Subtotal-total-box {
+    height: 240px;
+  }
+
+  .Checkout-btn-box {
+    min-height: 200px;
+  }
+
+  /* CHECKOUT PAGE */
+
+  main {
+    min-height: 750px;
+
+    overflow-x: hidden;
+  }
+
+  .Checkout-page {
+    min-height: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 10rem;
+  }
+
+  .Checkout-wrapper-1 {
+    display: grid;
+    grid-template-columns: 2fr 0fr 2fr;
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas:
+      "H1 Gap Gap1"
+      "H2 Gap3 Gap4"
+      "Gap5 Gap6 Btn"
+      "H3 Gap7 Gap8"
+      "DForm Gap9 Gap10"
+      "H4 Gap11 Gap12"
+      "PForm Gap13 Gap14";
+    min-width: 300px;
+    max-width: 100vw;
+    max-height: 100vh;
+    justify-items: center;
+    column-gap: 0;
+  }
+
+  .h1-h2-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Checkout-Input {
+    min-width: 300px;
+  }
+
+  .Card-details-form {
+    max-width: 30vw;
+    min-width: 20vw;
+  }
+
+  #Card-num,
+  #Cardholder-name {
+    width: 30vw;
+  }
+
+  .Expiry-CVV-row {
+    gap: 1rem;
+  }
+
+  #Expiry,
+  #CVV {
+    width: 8.5vw;
+  }
+
+  #Cardholder-name-label,
+  #Card-num-label {
+    text-wrap: nowrap;
+  }
+
+  .h2-checkout {
+    height: 200px;
+  }
+
+  .h3-checkout {
+    overflow: hidden;
+    padding: 0 51px 0 50px;
+  }
+
+  .h1-checkout,
+  .h2-checkout {
+    justify-self: start;
+    padding-left: 1rem;
+  }
+
+  .Return-to-cart-btn-wrapper {
+    grid-area: Btn;
+    margin-left: -6rem;
+    height: 300px;
+    padding-bottom: 3rem;
+  }
+}
+
+/* CHECKOUT SUCCESS PAGE */
+
+.Checkout-success-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+}
+
+.Checkout-success-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+  min-width: 80vw;
+  max-width: 80vw;
+  min-height: 60vh;
+  max-height: 60vh;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+}
+
+.checkout-text {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.tick-icon {
+  width: 5rem;
+  height: 5rem;
+}
+
+.Continue-Browsing-btn {
+  width: 12rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background-color: #9747ff;
+  font-weight: bold;
+  font-size: 1rem;
+}

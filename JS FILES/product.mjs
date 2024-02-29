@@ -1,14 +1,4 @@
 
-  
-// let films = JSON.parse(localStorage.getItem("listOfFilms"));
- 
-
-// const queryString = document.location.search;
-// const params = new URLSearchParams(queryString);
-// const id = params.get("id"); 
-
-
-// const squareEyesAPI = "https://v2.api.noroff.dev/square-eyes";
 
 
 // FETCH FILM CLICKED ON HOME PAGE

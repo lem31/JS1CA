@@ -85,8 +85,6 @@ function removeFilmFromCart(film) {
     }
    };
   
-  
-  
   };
 
   // DISPLAY FILM CART ITEMS 

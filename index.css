@@ -1,0 +1,516 @@
+/* VARIABLES */
+
+:root {
+  --Purple-Color: #9747ff;
+  --Linear-Purple-Color: linear-gradient(180deg, #aa47ff 0%, #0f3b70 100%);
+  --Base-Blue-Color: #0f3b70;
+  --Yellow-Color: #e6ff4b;
+  --White-Text-Color: #ffffff;
+  --Primary-Font: "Amaranth", "open sans";
+  --Secondary-Font: "Open Sans", "sans-serif";
+  --Background-Black: #000000;
+}
+
+/* GLOBAL STYLES */
+body,
+main,
+header,
+nav a,
+footer,
+.Container-1,
+.Container-4,
+.Header-text-box,
+.Checkout-success-page,
+#search-icon-button,
+.cart-icon {
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
+}
+
+.SquareEyes-logo,
+.square-eyes-logo-box,
+.Search-Cart-box,
+nav a {
+  position: static;
+  width: 100%;
+}
+
+.Container-1,
+.square-eyes-logo-box,
+.SMI-img-box,
+.footer-links-box {
+  display: flex;
+  flex-direction: row;
+}
+
+#hamburger,
+#mobile-checkbox,
+#mobile-checkbox:checked ~ nav {
+  display: none;
+}
+
+body,
+main {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.Container-1,
+.Container-4 {
+  background: var(--Linear-Purple-Color);
+}
+
+nav a,
+#search-box {
+  background-color: var(--Background-Black);
+}
+
+.Return-to-cart-btn {
+  background-color: var(--Purple-Color);
+}
+
+.active-page {
+  background-color: #6a6a6a;
+  border: none;
+}
+
+body,
+main {
+  width: 100%;
+  height: 100%;
+}
+
+/* HEADER & NAV */
+
+.Container-1 {
+  flex: 0 0 0px;
+  align-content: center;
+  justify-content: center;
+  min-height: 100px;
+  max-height: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  max-height: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.square-eyes-logo-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.SquareEyes-logo {
+  width: 8rem;
+  height: 5.5rem;
+  filter: drop-shadow(0.1rem 0.1rem white);
+  z-index: 10;
+  position: static;
+}
+
+nav {
+  display: inline-flex;
+  flex-direction: row;
+  position: static;
+  align-self: center;
+  justify-content: center;
+  white-space: nowrap;
+  z-index: 10;
+  width: 100%;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem 0.3rem 1rem 0.3rem;
+  margin-left: 0.3rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  min-width: 8rem;
+  max-width: 10rem;
+  text-align: center;
+  text-justify: center;
+}
+
+nav a:hover {
+  background-color: #a6a6a6;
+  border-color: #a6a6a6;
+}
+
+.Search-Cart-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax 100px);
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "GAP GAP"
+    "search cart"
+    "box box";
+  column-gap: 0;
+  width: 100%;
+  min-width: 8rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  margin-left: -2rem;
+}
+
+#search-icon-button,
+.cart-icon {
+  max-width: 4rem;
+  max-height: 4rem;
+}
+
+#search-icon-button {
+  grid-area: search;
+  align-self: center;
+  justify-self: end;
+}
+
+.cart-icon {
+  grid-area: cart;
+  align-self: center;
+}
+
+#search-checkbox {
+  display: none;
+}
+
+#search-checkbox:checked ~ #search-box {
+  display: block;
+}
+
+.Search-form {
+  grid-area: search;
+}
+
+#search-box {
+  display: none;
+  grid-area: box;
+  z-index: 10;
+  position: absolute;
+  color: var(--White-Text-Color);
+  border: 10px solid #9747ff;
+  min-width: 30rem;
+  max-width: 30rem;
+  min-height: 8vh;
+  max-height: 8vh;
+  padding: 8px 60px;
+  justify-self: start;
+  margin-top: 1.5rem;
+  margin-left: -30rem;
+}
+
+.h1-home-box {
+  grid-area: H1;
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  justify-content: center;
+}
+
+.Right-chevron-box {
+  display: none;
+}
+
+/* FOOTER */
+
+.Container-4 {
+  max-height: 240px;
+  overflow: hidden;
+  z-index: 8;
+}
+
+footer {
+  z-index: 8;
+  overflow: hidden;
+}
+
+.footer-content-box {
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  max-height: 50rem;
+  z-index: 8;
+}
+
+.SMI-img-box {
+  width: 100%;
+  justify-content: center;
+}
+
+footer img {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.footer-links-box {
+  justify-content: center;
+  width: 100%;
+}
+
+.Footer-Links a {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.line {
+  margin-left: 0.2rem;
+}
+
+/*  SMALL SCREEN MOBILE MEDIA QUERIES */
+
+@media (max-width: 500px) {
+  /* HEADER */
+
+  .Container-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-template-areas: "Hamburger Logo Search-Cart";
+    justify-items: center;
+    align-items: center;
+    gap: 0;
+    min-height: 100px;
+    max-height: 100px;
+  }
+
+  .square-eyes-logo-box {
+    justify-content: center;
+    width: 190px;
+  }
+
+  .SquareEyes-logo {
+    grid-area: Logo;
+    max-width: 100px;
+    max-height: 60px;
+    margin-top: 0.5rem;
+    align-self: center;
+    justify-self: end;
+  }
+
+  nav {
+    display: none;
+    grid-area: Hamburger;
+    width: 8rem;
+    background-color: black;
+    position: inherit;
+    max-height: 50px;
+    max-width: 100px;
+    min-width: 100px;
+    margin-top: 6rem;
+    margin-left: 5.2rem;
+    float: left;
+  }
+
+  nav a {
+    display: block;
+    justify-content: center;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-size: 1.5rem;
+    position: static;
+    margin: auto;
+  }
+
+  nav a:hover {
+    border: 4px solid purple;
+  }
+
+  #hamburger {
+    grid-area: Hamburger;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 1rem;
+    position: static;
+    align-self: center;
+    justify-self: center;
+  }
+
+  #mobile-checkbox:checked ~ nav {
+    display: block;
+  }
+
+  .Search-Cart-box {
+    grid-column-gap: 0;
+    grid-template-rows: 1fr 2fr 0fr;
+    margin-left: 0;
+  }
+
+  #search-box {
+    min-width: 20rem;
+    max-width: 20rem;
+    margin-left: -15rem;
+    margin-top: 1rem;
+  }
+
+  .search-icon,
+  .cart-icon {
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    position: static;
+  }
+
+  /* FOOTER */
+
+  .Footer-Links a {
+    font-size: 0.7rem;
+  }
+
+  .Container-4,
+  footer {
+    max-height: 110px;
+  }
+
+  .footer-content-box {
+    height: 10rem;
+    max-height: 10rem;
+    row-gap: 0.5rem;
+  }
+
+  footer img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  main {
+    min-height: 750px;
+    overflow-x: hidden;
+  }
+}
+
+/* LARGE SCREEN MOBILE + TABLET MEDIA QUERIES */
+
+@media (min-width: 501px) and (max-width: 908px) {
+  /* HEADER */
+
+  .Container-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-areas: "Hamburger Logo Search-Cart";
+    justify-items: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .square-eyes-logo-box {
+    width: 120px;
+  }
+
+  .SquareEyes-logo {
+    grid-area: Logo;
+    max-width: 140px;
+    max-height: 70px;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  nav {
+    display: none;
+    grid-area: Hamburger;
+    width: 8rem;
+    position: inherit;
+    max-height: 50px;
+    max-width: 100px;
+    min-width: 100px;
+    margin-top: 6rem;
+    margin-left: 5.2rem;
+    float: left;
+  }
+
+  nav a {
+    display: block;
+    justify-content: center;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-size: 1.5rem;
+    position: static;
+    margin: auto;
+  }
+
+  nav a:hover {
+    border: 4px solid purple;
+  }
+
+  #hamburger {
+    grid-area: Hamburger;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 1rem;
+    position: relative;
+    align-self: center;
+    justify-self: center;
+  }
+
+  #mobile-checkbox:checked ~ nav {
+    display: block;
+  }
+
+  .Search-Cart-box {
+    grid-column-gap: 1.5rem;
+    grid-template-rows: 1fr 2fr 0fr;
+  }
+
+  #search-box {
+    min-width: 25rem;
+    max-width: 25rem;
+    margin-left: -18rem;
+    margin-top: 0.8rem;
+  }
+
+  .search-icon,
+  .cart-icon {
+    max-width: 2.8rem;
+    max-height: 2.8rem;
+  }
+
+  /* HOME PAGE */
+
+  .Container-3 {
+    height: 500px;
+    z-index: 8;
+    position: static;
+  }
+
+  /* FOOTER */
+
+  .Footer-Links a {
+    font-size: 0.7rem;
+  }
+
+  .Container-4 {
+    max-height: 140px;
+  }
+
+  .footer-content-box {
+    max-height: 10rem;
+    row-gap: 0.5rem;
+  }
+
+  footer img {
+    height: 2rem;
+    width: 2rem;
+  }
+}

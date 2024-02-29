@@ -4,8 +4,6 @@
 const squareEyesAPI = 'https://v2.api.noroff.dev/square-eyes'
 
 
-
-
 function fetchSquareEyesAPI(){
 const squareEyesData = async(url) => {
   try{
@@ -23,8 +21,8 @@ squareEyesData(squareEyesAPI);
 
 
 
-
 let films = JSON.parse(localStorage.getItem("listOfFilms"));
+
 
 
 
