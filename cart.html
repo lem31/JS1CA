@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" device="device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <script type="module" defer src="cart.mjs"></script>
+  </head>
+
+  <body>
+    <header>
+      <a id="product-page" href="product.html">Product Page</a>
+
+      <a href="checkout.html">Checkout</a>
+    </header>
+    <select name="film-categories" id="film-Categories">
+      <option id="all-films" value="All-Films">All Films</option>
+      <option id="action" value="Action">Action</option>
+      <option id="horror" value="Horror">Horror</option>
+      <option id="kids" value="Kids">Kids</option>
+      <option id="comedy" value="Comedy">Comedy</option>
+      <option id="drama" value="Drama">Drama</option>
+    </select>
+
+    <h1>YOUR CART</h1>
+    <div id="Films-in-cart">
+      <div id="-total-box"></div>
+    </div>
+  </body>
+</html>

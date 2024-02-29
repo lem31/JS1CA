@@ -85,13 +85,6 @@ ratingBox.append(ratingImg, rating);
 
 
 
-// 1. fetch film ID + quantity
-
-// 2. create Html 
-
-// 3. Add to cart 
-
-
 
   // CREATE FILM CART
 
