@@ -1532,6 +1532,10 @@ footer img {
     column-gap: 0;
   }
 
+  .film-cart {
+    grid-area: Gap10;
+  }
+
   .h1-h2-column {
     display: flex;
     flex-direction: column;
