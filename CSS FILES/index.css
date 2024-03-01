@@ -176,6 +176,10 @@ main {
   height: 100%;
 }
 
+.rating-box {
+  display: flex;
+}
+
 /* HEADER & NAV */
 
 .Container-1 {
