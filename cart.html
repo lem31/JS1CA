@@ -1,119 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <meta name="viewport" device="device-width, initial-scale=1.0" />
-    <title>Cart</title>
+    <meta
+      name="description"
+      content="Checkout our latest Films at SquareEyes"
+    />
+
+    <link rel="stylesheet" href="SquareEyes-Film-Page.css" />
+    <link rel="icon" type="image/png" href="Images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/04bc286c5b.js"
+      crossorigin="anonymous"
+    ></script>
+
     <script type="module" defer src=".//JS FILES/cart.mjs"></script>
     <link rel="stylesheet" href="index.css" />
+    <title>SquareEyes Cart Page</title>
   </head>
 
-
-
-<body>
-  <header>
-    <div class="Container-1">
-      <div class="square-eyes-logo-box">
-        <a href="index.html"
-          ><img
+  <body>
+    <header>
+      <div class="Container-1">
+        <div class="square-eyes-logo-box">
+          <img
             class="SquareEyes-logo"
             src="Images/Logo4.png"
             alt="Square Eyes logo"
-        /></a>
-      </div>
+          />
+        </div>
 
-      <input type="checkbox" id="mobile-checkbox" />
-      <label id="hamburger" for="mobile-checkbox"
-        ><i
-          tabindex="0"
-          class="fa-solid fa-bars fa-2xl"
-          style="color: #ffffff"
-        ></i
-      ></label>
+        <input type="checkbox" id="mobile-checkbox" />
+        <label id="hamburger" for="mobile-checkbox"
+          ><i
+            tabindex="0"
+            id="hamburger-img"
+            class="fa-solid fa-bars fa-2xl"
+            style="color: #ffffff"
+          ></i
+        ></label>
 
-      <nav aria-label="navigation menu">
-        <a
-          tabindex="0"
-          aria-label="navigation menu home"
-          class="active-page"
-          href="index.html"
-          >Home</a
-        >
-        <a tabindex="0" aria-label="navigation menu Films" href="cart.html"
-          >Cart</a
-        >
-        <a
-          tabindex="0"
-          aria-label="navigation menu About Us"
-          href="checkout.html"
-          >Checkout</a
-        >
-        <a
-          tabindex="0"
-          aria-label="navigation menu Contact"
-          href="product.html"
-          >Product</a
-        >
-      </nav>
+        <nav aria-label="navigation menu">
+          <a
+            tabindex="0"
+            aria-label="navigation menu home"
+            class="active-page"
+            href=""
+            >Home</a
+          >
 
-      <div class="Search-Cart-box">
-        <form class="Search-form" role="search" action="">
-          <input tabindex="0" type="checkbox" id="search-checkbox" />
-          <label id="search-icon-button" for="search-checkbox"
-            ><img
-              tabindex="0"
-              class="search-icon"
-              src="Images/SearchIcon-white.png"
-              alt="White Search Button"
-          /></label>
-          <label id="search-box-label" for="search-box"></label>
-          <input id="search-box" type="search" placeholder="Search Films" />
-        </form>
+          <a
+            tabindex="0"
+            aria-label="navigation menu About Us"
+            href="AboutUs.html"
+            >About Us</a
+          >
+          <a
+            tabindex="0"
+            aria-label="navigation menu Contact"
+            href="Contact.html"
+            >Contact</a
+          >
+        </nav>
 
-        <a class="cart-icon" href="CartPage.html"
-          ><img
-            class="cart-icon"
-            src="Images/CartIcon-White.png"
-            alt="Cart icon"
-        /></a>
-      </div>
-    </div>
-  </header>
+        <div class="Search-Cart-box">
+          <form class="Search-form" role="search" action="">
+            <input tabindex="0" type="checkbox" id="search-checkbox" />
+            <label id="search-icon-button" for="search-checkbox"
+              ><img
+                tabindex="0"
+                class="search-icon"
+                src="Images/SearchIcon-white.png"
+                alt="White Search Button"
+            /></label>
+            <label id="search-box-label" for="search-box"></label>
+            <input id="search-box" type="search" placeholder="Search Films" />
+          </form>
 
-<body>
-
-
-  <h1>YOUR CART</h1>
-  <div id="Films-in-cart"></div>
-  <div id="films-display-box"></div>
- 
-    <div id="cart-total-box"></div>
-
-
-   <a href="checkout.html"><button>Checkout</button></a> 
- 
-</body>
-
-<footer>
-  <div class="Container-4">
-    <div class="footer-content-box">
-      <div class="SMI-img-box">
-        <img src="Images/FacebookIcon.png" alt="Facebook icon" />
-        <img src="Images/InstagramIcon.png" alt="Instagram icon" />
-        <img src="Images/TwitterIcon.png" alt="Twitter icon" />
-        <img src="Images/YoutubeIcon.png" alt="Youtube icon" />
-      </div>
-
-      <div class="footer-links-box">
-        <div class="Footer-Links">
-          <a href="">Support<span class="line">|</span></a>
-          <a href="">Terms of use <span class="line">|</span></a>
-          <a href="">Contact<span class="line">|</span></a>
-          <a href="">Privacy Statement<span class="line">|</span></a>
-          <a href="">FAQ</a>
+          <a class="cart-icon" href="cart.html">
+            <img
+              class="cart-icon"
+              src="Images/CartIcon-White.png"
+              alt="Cart icon"
+          /></a>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </header>
+
+    <main>
+      <h1>YOUR CART</h1>
+      <div id="Films-in-cart"></div>
+      <div id="films-display-box"></div>
+
+      <div id="cart-total-box"></div>
+
+      <a href="checkout.html"><button>Checkout</button></a>
+    </main>
+
+    <footer>
+      <div class="Container-4">
+        <div class="footer-content-box">
+          <div class="SMI-img-box">
+            <img src="Images/FacebookIcon.png" alt="Facebook icon" />
+            <img src="Images/InstagramIcon.png" alt="Instagram icon" />
+            <img src="Images/TwitterIcon.png" alt="Twitter icon" />
+            <img src="Images/YoutubeIcon.png" alt="Youtube icon" />
+          </div>
+
+          <div class="footer-links-box">
+            <div class="Footer-Links">
+              <a href="">Support<span class="line">|</span></a>
+              <a href="">Terms of use <span class="line">|</span></a>
+              <a href="">Contact<span class="line">|</span></a>
+              <a href="">Privacy Statement<span class="line">|</span></a>
+              <a href="">FAQ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

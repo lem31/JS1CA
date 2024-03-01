@@ -1,14 +1,14 @@
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
     <meta
-      name="SquareEyes Checkout Success Page"
-      content="SquareEyes Film Website"
+      name="description"
+      content="Checkout our latest Films at SquareEyes"
     />
-    <link rel="stylesheet" href="index.css" />
+
+    <link rel="stylesheet" href="SquareEyes-Film-Page.css" />
     <link rel="icon" type="image/png" href="Images/favicon-32x32.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,26 +26,27 @@
       src="https://kit.fontawesome.com/04bc286c5b.js"
       crossorigin="anonymous"
     ></script>
-    <script type="module" defer src=".//JS FILES/script.js"></script>
-    <title>Square Eyes Home Page</title>
+    <script defer src=".//JS FILES/script.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>SquareEyes Home</title>
   </head>
 
   <body>
     <header>
       <div class="Container-1">
         <div class="square-eyes-logo-box">
-          <a href="index.html"
-            ><img
-              class="SquareEyes-logo"
-              src="Images/Logo4.png"
-              alt="Square Eyes logo"
-          /></a>
+          <img
+            class="SquareEyes-logo"
+            src="Images/Logo4.png"
+            alt="Square Eyes logo"
+          />
         </div>
 
         <input type="checkbox" id="mobile-checkbox" />
         <label id="hamburger" for="mobile-checkbox"
           ><i
             tabindex="0"
+            id="hamburger-img"
             class="fa-solid fa-bars fa-2xl"
             style="color: #ffffff"
           ></i
@@ -56,23 +57,21 @@
             tabindex="0"
             aria-label="navigation menu home"
             class="active-page"
-            href="index.html"
+            href=""
             >Home</a
           >
-          <a tabindex="0" aria-label="navigation menu Films" href="cart.html"
-            >Cart</a
-          >
+
           <a
             tabindex="0"
             aria-label="navigation menu About Us"
-            href="checkout.html"
-            >Checkout</a
+            href="AboutUs.html"
+            >About Us</a
           >
           <a
             tabindex="0"
             aria-label="navigation menu Contact"
-            href="product.html"
-            >Product</a
+            href="Contact.html"
+            >Contact</a
           >
         </nav>
 
@@ -90,8 +89,8 @@
             <input id="search-box" type="search" placeholder="Search Films" />
           </form>
 
-          <a class="cart-icon" href="CartPage.html"
-            ><img
+          <a class="cart-icon" href="cart.html">
+            <img
               class="cart-icon"
               src="Images/CartIcon-White.png"
               alt="Cart icon"
@@ -100,39 +99,70 @@
       </div>
     </header>
 
-  <body>
-    <header><a id="product-page" href="product.html">Product Page</a></header>
-    <select name="film-categories" id="film-Categories">
-      <option id="all-films" value="All-Films">All Films</option>
-      <option id="action" value="Action">Action</option>
-      <option id="horror" value="Horror">Horror</option>
-      <option id="kids" value="Kids">Kids</option>
-      <option id="comedy" value="Comedy">Comedy</option>
-      <option id="drama" value="Drama">Drama</option>
-    </select>
-    <div id="films-display-box"></div>
-  </body>
+    <main>
+      <div class="Container-2">
+        <section class="The-Batman-img-box">
+          <img
+            class="The-Batman-img"
+            src="Images/TheBatmanMainimageEditedV4.png"
+            alt="The Batman Movie Poster"
+          />
 
-  <footer>
-    <div class="Container-4">
-      <div class="footer-content-box">
-        <div class="SMI-img-box">
-          <img src="Images/FacebookIcon.png" alt="Facebook icon" />
-          <img src="Images/InstagramIcon.png" alt="Instagram icon" />
-          <img src="Images/TwitterIcon.png" alt="Twitter icon" />
-          <img src="Images/YoutubeIcon.png" alt="Youtube icon" />
-        </div>
-  
-        <div class="footer-links-box">
-          <div class="Footer-Links">
-            <a href="">Support<span class="line">|</span></a>
-            <a href="">Terms of use <span class="line">|</span></a>
-            <a href="">Contact<span class="line">|</span></a>
-            <a href="">Privacy Statement<span class="line">|</span></a>
-            <a href="">FAQ</a>
+          <div class="The-Batman-box-elements">
+            <div class="h1-home-box">
+              <h1 class="h1-home">
+                Top&nbsp;<a href="Films.html"
+                  ><span class="films">films</span></a
+                >&nbsp;at top prices
+              </h1>
+            </div>
+
+            <div class="h2-home-box">
+              <h2 class="h2-home">The Batman</h2>
+            </div>
+
+            <div class="WN-box">
+              <form action="Product-page1.html">
+                <button class="Watch-now">Watch Now</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <select name="film-categories" id="film-Categories">
+        <option id="all-films" value="All-Films">All Films</option>
+        <option id="action" value="Action">Action</option>
+        <option id="horror" value="Horror">Horror</option>
+        <option id="kids" value="Kids">Kids</option>
+        <option id="comedy" value="Comedy">Comedy</option>
+        <option id="drama" value="Drama">Drama</option>
+      </select>
+
+      <div id="films-display-box"></div>
+    </main>
+
+    <footer>
+      <div class="Container-4">
+        <div class="footer-content-box">
+          <div class="SMI-img-box">
+            <img src="Images/FacebookIcon.png" alt="Facebook icon" />
+            <img src="Images/InstagramIcon.png" alt="Instagram icon" />
+            <img src="Images/TwitterIcon.png" alt="Twitter icon" />
+            <img src="Images/YoutubeIcon.png" alt="Youtube icon" />
+          </div>
+
+          <div class="footer-links-box">
+            <div class="Footer-Links">
+              <a href="">Support<span class="line">|</span></a>
+              <a href="">Terms of use <span class="line">|</span></a>
+              <a href="">Contact<span class="line">|</span></a>
+              <a href="">Privacy Statement<span class="line">|</span></a>
+              <a href="">FAQ</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </body>
 </html>
