@@ -58,7 +58,7 @@
             tabindex="0"
             aria-label="navigation menu home"
             class="active-page"
-            href=""
+            href="index.html"
             >Home</a
           >
 
@@ -102,13 +102,162 @@
 
     <main>
       <h1>Checkout</h1>
-      <div id="Films-in-cart">
-        <div id="cart-total-box"></div>
-      </div>
 
-      <form action="submit"></form>
+      <section class="Checkout-page">
+        <div class="Checkout-wrapper-1">
+          <h1 class="h1-checkout">Checkout</h1>
+          <h2 class="h2-checkout">Summary</h2>
 
-      <div id="films-display-box"></div>
+          <div id="Films-in-cart">
+            <div id="films-display-box"></div>
+            <div id="cart-total-box"></div>
+          </div>
+
+          <div class="Return-to-cart-btn-wrapper">
+            <form action="CartPage.html">
+              <button class="Return-to-cart-btn">Return to cart</button>
+            </form>
+          </div>
+
+          <div class="h3-checkout-box">
+            <h3 class="h3-checkout">Delivery Address</h3>
+          </div>
+
+          <form action="CheckoutSuccess.html" class="delivery-form">
+            <div class="delivery-form-wrapper">
+              <label
+                class="Checkout-Label-del"
+                id="FN-label-checkout"
+                for="First-Name-checkout"
+                >First Name</label
+              >
+              <input
+                class="Checkout-Input"
+                type="text"
+                id="First-Name-checkout"
+                name="First-Name"
+              />
+
+              <label
+                class="Checkout-Label-del"
+                id="LN-label-checkout"
+                for="Last-Name-checkout"
+                >Last Name</label
+              >
+              <input
+                class="Checkout-Input"
+                type="text"
+                id="Last-Name-checkout"
+                name="Last-Name"
+              />
+
+              <label class="Checkout-Label-del" id="Address-label" for="Address"
+                >Street Address</label
+              >
+              <input
+                class="Checkout-Input"
+                type="text"
+                id="Address"
+                name="Address"
+              />
+
+              <label class="Checkout-Label-del" id="Town-label" for="Town"
+                >Town</label
+              >
+              <input class="Checkout-Input" type="text" id="Town" name="Town" />
+
+              <label class="Checkout-Label-del" id="Country-label" for="Country"
+                >Country</label
+              >
+              <input
+                class="Checkout-Input"
+                type="text"
+                id="Country"
+                name="Country"
+              />
+
+              <label
+                class="Checkout-Label-del"
+                id="Postcode-label"
+                for="Postcode"
+                >Postcode</label
+              >
+              <input
+                class="Checkout-Input"
+                type="tel"
+                id="Postcode"
+                name="Postcode"
+              />
+            </div>
+
+            <h4 class="h4-checkout">Payment</h4>
+
+            <div class="Card-details-form-wrapper">
+              <div class="Card-details-form">
+                <div class="card-num-column">
+                  <label
+                    class="Checkout-Label"
+                    id="Card-num-label"
+                    for="Card-num"
+                    >Card number</label
+                  >
+                  <input
+                    class="Checkout-Input-PForm"
+                    type="tel"
+                    id="Card-num"
+                    name="Card-num"
+                  />
+                </div>
+
+                <div class="Expiry-CVV-row">
+                  <div class="Expiry-column">
+                    <label class="Checkout-Label" id="Expiry-label" for="Expiry"
+                      >Expiry</label
+                    >
+                    <input
+                      class="Checkout-Input-PForm"
+                      type="tel"
+                      id="Expiry"
+                      name="Expiry"
+                    />
+                  </div>
+
+                  <div class="CVV-column">
+                    <label class="Checkout-Label" id="CVV-Label" for="CVV"
+                      >CVV</label
+                    >
+                    <input
+                      class="Checkout-Input-PForm"
+                      type="tel"
+                      id="CVV"
+                      name="CVV"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    class="Checkout-Label"
+                    id="Cardholder-name-label"
+                    for="Cardholder-name"
+                    >Cardholder name</label
+                  >
+                  <input
+                    class="Checkout-Input-PForm"
+                    type="text"
+                    id="Cardholder-name"
+                    name="Cardholder-name"
+                  />
+                </div>
+
+                <div class="pay-btn-wrapper">
+                  <button class="pay-btn" type="submit">Pay $0</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer>

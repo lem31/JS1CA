@@ -38,20 +38,12 @@ function createFilmHtml(film){
    
   const ratingImg = document.createElement('img');
   ratingImg.src = "https://img.icons8.com/ios-filled/50/rating.png";
-  
-  const payNowButtonBox = document.createElement('div');
-  
-  const payNowButton = document.createElement('Button');
-  payNowButton.classList.add('pay-now-btn');
- payNowButton.textContent = 'Pay Now';
-  
 
 
-payNowButtonBox.appendChild(payNowButton);
 
 filmBox.appendChild(filmContent);
   
-filmContent.append(filmHeader, filmPoster, ratingBox, releaseDate, payNowButtonBox);
+filmContent.append(filmHeader, filmPoster, ratingBox, releaseDate);
 
 ratingBox.append(ratingImg, rating);
 
