@@ -19,6 +19,10 @@
   grid-area: Gap2;
 }
 
+.film-poster-box {
+  width: 100px;
+}
+
 .Checkout-wrapper-1 {
   display: grid;
   grid-template-columns: repeat(2, auto);

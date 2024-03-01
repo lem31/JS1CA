@@ -20,7 +20,13 @@ function createFilmHtml(film){
     filmHeader.textContent = film.title; 
   
   const filmPoster = document.createElement('img');
+  filmPoster.classList.add('film-poster-img');
   filmPoster.src = film.image?.url;
+
+  const filmPosterBox = document.createElement('div');
+  filmPoster.classList.add('film-poster-box');
+
+
   
   const filmPriceBox = document.createElement('div');
   
@@ -43,7 +49,9 @@ function createFilmHtml(film){
 
 filmBox.appendChild(filmContent);
   
-filmContent.append(filmHeader, filmPoster, ratingBox, releaseDate);
+filmContent.append(filmHeader, filmPosterBox, ratingBox, releaseDate);
+
+filmPosterBox.appendChild(filmPoster);
 
 ratingBox.append(ratingImg, rating);
 
