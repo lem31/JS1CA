@@ -32,5 +32,8 @@ orderDetails.append(orderDetailsText1, orderDetailsBox, orderDetailsText2);
 
 console.log(orderDetailsBox);};
 
+
+
+
 displayOrderDetails();
 

@@ -1193,6 +1193,7 @@ footer img {
     max-width: 100vw;
     max-height: 100vh;
     justify-items: center;
+    align-items: center;
     column-gap: 0;
   }
 
@@ -1250,16 +1251,20 @@ footer img {
 
   .Return-to-cart-btn {
     grid-area: Btn;
+    margin-left: 3rem;
   }
 
   .Return-to-cart-btn-wrapper {
     grid-area: Btn;
-    margin-left: -6.5rem;
   }
 
   .h3-checkout-box {
     margin-left: 1rem;
     position: static;
+  }
+
+  .film-cart {
+    grid-area: Gap5;
   }
 
   /* CHECKOUT SUCCESS PAGE */
