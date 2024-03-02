@@ -3,26 +3,6 @@
 
 
 
-const squareEyesAPI = 'https://v2.api.noroff.dev/square-eyes'
-
-
-function fetchSquareEyesAPI(){
-const squareEyesData = async(url) => {
-  try{
-    let response = await fetch(url)
-    let films = await response.json()
-    localStorage.setItem("listOfFilms", JSON.stringify(films.data))
-  } catch(error){
-    console.error("unable to fetch:" + error);
-  }
-} 
-
-
-squareEyesData(squareEyesAPI); 
-};
-
-
-
 let films = JSON.parse(localStorage.getItem("listOfFilms"));
 
 console.log(films);
@@ -49,25 +29,73 @@ function createFilmsHtml(film){
   const filmInfo = document.createElement('p');
   filmInfo.textContent = film.description;
   
+
+  const addToCartBtn= document.createElement('button');
+  addToCartBtn.classList.add('Add-to-cart-btn');
+  addToCartBtn.textContent = "Add to Cart";
+
+addToCartBtn.addEventListener('click', ()=>{
+  addFilmToCart(film);
+  location.reload(true);} );
   
   
   filmBox.appendChild(filmContent);
   
-  filmContent.append(filmHeader, filmPoster, filmInfo);
+  filmContent.append(filmHeader, filmPoster, filmInfo, addToCartBtn);
   
   
   return filmBox;
   }
 
 
+  function addFilmToCart(film){ 
+    const filmCart = JSON.parse(localStorage.getItem('filmCart'));
+    for (let i=0; i< filmCart.length; i++){
+      if(filmCart[i].title === film.title){
+        alert('Film already added to cart');
+        return;
+      }
+    }
+    filmCart.push(film);
+    
+    localStorage.setItem('filmCart', JSON.stringify(filmCart));
+    
+    console.log(filmCart);
+    
+    };
 
 
+
+function displayBatmanFilm(){
 const batmanFilm= films[5];
-
 
 const batmanFilmHtml = createFilmsHtml(batmanFilm);
 
 const filmDisplayBox = document.getElementById('film-display-box');
 
 filmDisplayBox.appendChild(batmanFilmHtml);
-console.log(filmDisplayBox);
+console.log(filmDisplayBox);};
+
+
+const filmCart = JSON.parse(localStorage.getItem('filmCart'));
+
+
+function displayQuantityOnCartImg(){
+  const filmCartQuantity = document.createElement('p');
+  filmCartQuantity.classList.add('film-quantity');
+  filmCartQuantity.textContent = filmCart.length; 
+  const cartImage = document.getElementById('cart-img-box');
+  cartImage.appendChild(filmCartQuantity);
+
+  };
+
+
+
+
+displayBatmanFilm();
+displayQuantityOnCartImg();
+
+
+
+
+

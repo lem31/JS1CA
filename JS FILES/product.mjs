@@ -56,6 +56,7 @@ ratingImg.src = "https://img.icons8.com/ios-filled/50/rating.png";
 
 addToCartBtn.addEventListener('click', ()=>{
   addFilmToCart(film);
+  location.reload(true);
 
 } );
 
@@ -117,7 +118,10 @@ function displayQuantityOnCartImg(){
   const cartImage = document.getElementById('cart-img-box');
   cartImage.appendChild(filmCartQuantity);
 
+
   };
+
+
 
 
 

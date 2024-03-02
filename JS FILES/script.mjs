@@ -182,6 +182,7 @@ function displayQuantityOnCartImg(){
   filmCartQuantity.textContent = filmCart.length; 
   const cartImage = document.getElementById('cart-img-box');
   cartImage.appendChild(filmCartQuantity);
+  
 
   };
 
