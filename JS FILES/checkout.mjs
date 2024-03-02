@@ -13,7 +13,7 @@ function createFilmHtml(film){
   filmBox.classList.add('film-box');
   
   const filmContent = document.createElement('div');
-    filmContent.classList.add('film-content');
+    filmContent.classList.add('film-content-checkout');
   
   
   const filmHeader = document.createElement('h3');
@@ -24,7 +24,7 @@ function createFilmHtml(film){
   filmPoster.src = film.image?.url;
 
   const filmPosterBox = document.createElement('div');
-  filmPoster.classList.add('film-poster-box');
+  filmPoster.classList.add('film-poster-box-checkout');
 
   const filmPriceBox = document.createElement('div');
   

@@ -19,9 +19,9 @@
   grid-area: Gap2;
 }
 
-.film-poster-box,
-.film-content {
-  width: 100px;
+.film-poster-box-checkout,
+.film-content-checkout {
+  width: 200px;
 }
 
 .Checkout-wrapper-1 {
