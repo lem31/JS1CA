@@ -17,9 +17,11 @@ const filmContent = document.createElement('div');
 
 const filmHeader = document.createElement('h3');
   filmHeader.textContent = film.title; 
+  filmHeader.classList.add('film-header')
 
 const filmPoster = document.createElement('img');
 filmPoster.src = film.image?.url;
+filmPoster.classList.add('film-poster-home');
 
 const filmPriceBox = document.createElement('div');
 
@@ -28,6 +30,7 @@ filmPrice.textContent = film.price + "NOK";
 
 const releaseDate = document.createElement('h3');
   releaseDate.textContent = film.released;
+  releaseDate.classList.add('release-date');
 
 const rating = document.createElement('p');
 rating.textContent = film.rating;  

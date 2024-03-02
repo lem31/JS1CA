@@ -134,7 +134,9 @@ nav a,
 .h2-checkout,
 .h3-checkout,
 .h4-checkout,
-.film-header {
+.film-header,
+.film-header-product,
+.cart-h1 {
   color: var(--White-Text-Color);
   font-family: var(--Primary-Font);
 }
