@@ -18,7 +18,7 @@ const orderDetails = document.getElementById('checkout-text');
 const orderDetailsBox = document.createElement('p');
 orderDetailsBox.classList.add('order-number-info')
 
-orderDetailsBox.textContent = 'Your order number is:'+ orderNumber; 
+orderDetailsBox.textContent = 'Your order number is:'+'' + orderNumber; 
 
 orderDetails.append(orderDetailsBox);
 
