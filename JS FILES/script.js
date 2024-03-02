@@ -36,11 +36,12 @@ const filmContent = document.createElement('div');
   filmContent.classList.add('film-content');
 
 const filmHeader = document.createElement('h3');
+filmHeader.classList.add('film-header');
   filmHeader.textContent = film.title; 
 
 const filmPoster = document.createElement('img');
 filmPoster.src = film.image.url;
-filmPoster.classList.add('film-poster');
+filmPoster.classList.add('film-poster-home');
 
 filmPoster.addEventListener('click', () => {
 localStorage.setItem('film', JSON.stringify(film))
@@ -50,19 +51,13 @@ const posterLink = document.createElement('a');
 
 posterLink.href= `./product.html?id=${film.id}/`;
 
-const filmPriceBox = document.createElement('div');
-
-const filmPrice = document.createElement('div');
-filmPrice.textContent = film.price + "NOK";
-
 
 posterLink.appendChild(filmPoster);
 
 filmBox.appendChild(filmContent);
 
-filmContent.append(filmHeader, posterLink, filmPriceBox);
+filmContent.append(filmHeader, posterLink);
 
-filmPriceBox.append(filmPrice);
 
 return filmBox;
 }
@@ -71,7 +66,7 @@ return filmBox;
 
 
 function showAllFilms(){
-  const filmDisplayBox = document.getElementById('films-display-box');
+  const filmDisplayBox = document.getElementById('films-display-box-home');
   films.forEach((film) => {
          const filmHtml= createFilmsHtml(film);
           filmDisplayBox.appendChild(filmHtml);
@@ -88,7 +83,7 @@ async function showFilmsByCategory(films) {
     
     const selectedValue = this.value;
     
-    const filmDisplayBox = document.getElementById('films-display-box');
+    const filmDisplayBox = document.getElementById('films-display-box-home');
 
 
     filmDisplayBox.innerHTML = "";

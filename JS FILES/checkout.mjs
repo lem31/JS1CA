@@ -26,8 +26,6 @@ function createFilmHtml(film){
   const filmPosterBox = document.createElement('div');
   filmPoster.classList.add('film-poster-box');
 
-
-  
   const filmPriceBox = document.createElement('div');
   
   const filmPrice = document.createElement('div');
