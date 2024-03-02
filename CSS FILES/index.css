@@ -133,7 +133,8 @@ nav a,
 .h1-checkout,
 .h2-checkout,
 .h3-checkout,
-.h4-checkout {
+.h4-checkout,
+.film-header {
   color: var(--White-Text-Color);
   font-family: var(--Primary-Font);
 }
@@ -554,6 +555,10 @@ h3 {
   border-radius: 9px;
   border-color: var(--Purple-Color);
   margin-bottom: 2rem;
+}
+
+.film-header-product {
+  font-size: 30px;
 }
 
 /* 

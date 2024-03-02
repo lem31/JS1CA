@@ -22,7 +22,7 @@ const wrapper = document.getElementById('films-display-box');
     filmContent.classList.add('film-content');
   
   const filmHeader = document.createElement('h3');
-  filmHeader.classList.add('film-header');
+  filmHeader.classList.add('film-header-product');
     filmHeader.textContent = film.title; 
   
   const filmPoster = document.createElement('img');
