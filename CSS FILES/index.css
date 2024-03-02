@@ -1267,6 +1267,11 @@ footer img {
     grid-area: Gap5;
   }
 
+  .checkout-btn {
+    height: 60px;
+    width: 200px;
+  }
+
   /* CHECKOUT SUCCESS PAGE */
 
   .Checkout-success-box {
