@@ -147,10 +147,31 @@ checkoutTotalBox.appendChild(filmItemQuantity);
 };
 
 
+function displayQuantityOnCartImg(){
+
+  const filmCart = JSON.parse(localStorage.getItem('filmCart'));
+  const filmCartQuantity = document.createElement('span');
+  filmCartQuantity.classList.add('film-quantity');
+  filmCartQuantity.textContent = 'Quantity:'+filmCart.length; 
+  const cartTotalBox = document.createElement('cart-total');
+  cartTotalBox.classList.add('cart-total-box');
+  const cartImage = document.getElementsByClassName('cart-icon');
+  cartTotalBox.append(filmCartQuantity, cartImage);
+
+  const searchCartBox = document.getElementsByClassName('Search-Cart-box');
+  searchCartBox.append(cartTotalBox);
+  
+  };
+
+
+
+
+
 function allFunctions(){
   showFilmCartItems();
   displayCheckoutQuantity();
   displayCheckoutTotal();
+  displayQuantityOnCartImg()
  
 }
 
