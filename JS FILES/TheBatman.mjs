@@ -20,6 +20,7 @@ function createFilmsHtml(film){
   const filmHeader = document.createElement('h3');
   filmHeader.classList.add('film-header');
     filmHeader.textContent = film.title; 
+
   
   const filmPoster = document.createElement('img');
   filmPoster.src = film.image.url;
@@ -30,6 +31,7 @@ function createFilmsHtml(film){
 
   const releaseDate = document.createElement('h3');
   releaseDate.textContent = film.released;
+  releaseDate.classList.add('release-date');
 
   const ratingBox = document.createElement('div');
   ratingBox.classList.add('rating-box');
@@ -39,6 +41,7 @@ ratingImg.src = "https://img.icons8.com/ios-filled/50/rating.png";
   
   const filmInfo = document.createElement('p');
   filmInfo.textContent = film.description;
+  filmInfo.classList.add('film-info');
   
 
   const addToCartBtn= document.createElement('button');
