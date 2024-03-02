@@ -112,7 +112,8 @@ nav a,
 
 .Return-to-cart-btn,
 .Add-to-cart-btn,
-.remove-film-btn {
+.remove-film-btn,
+.checkout-btn {
   background-color: var(--Purple-Color);
 }
 
@@ -153,7 +154,8 @@ nav a,
 .price,
 .Add-to-cart-btn,
 .remove-film-btn,
-#cart-total-box {
+#cart-total-box,
+.checkout-btn {
   font-family: var(--Secondary-Font);
   color: var(--White-Text-Color);
 }
@@ -595,12 +597,23 @@ CART PAGE */
   margin-bottom: 2.5rem;
 }
 
-.remove-film-btn {
+.remove-film-btn,
+.checkout-btn {
   font-weight: bold;
   font-size: 15px;
   border-radius: 8px;
-  height: 40px;
+
   border-color: var(--Purple-Color);
+}
+
+.checkout-btn {
+  height: 80px;
+  width: 500px;
+  margin-bottom: 40px;
+}
+
+.remove-film-btn {
+  height: 40px;
 }
 
 /* FOOTER */
