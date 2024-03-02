@@ -156,7 +156,9 @@ nav a,
 .remove-film-btn,
 #cart-total-box,
 .checkout-btn,
-.order-number-info {
+.order-number-info,
+.order-details-one,
+.order-details-two {
   font-family: var(--Secondary-Font);
   color: var(--White-Text-Color);
 }
@@ -619,8 +621,6 @@ CART PAGE */
 
 /* CHECKOUT SUCCESS PAGE */
 
-/* CHECKOUT SUCCESS PAGE */
-
 .Checkout-success-page {
   display: flex;
   flex-direction: column;
@@ -659,6 +659,12 @@ CART PAGE */
   background-color: #9747ff;
   font-weight: bold;
   font-size: 1rem;
+}
+
+.order-number-info,
+.order-details-one,
+.order-details-two {
+  text-align: center;
 }
 
 /* FOOTER */
