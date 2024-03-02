@@ -1,9 +1,5 @@
 
 
-// import { displayCheckoutTotal, displayCheckoutQuantity } from "./cart.mjs";
-
-
-
 
 
 
@@ -105,14 +101,14 @@ export function displayCheckoutTotal(){
   console.log(checkoutTotal);
 };
 
-
+const filmCart = JSON.parse(localStorage.getItem('filmCart'));
 
 // DISPLAY CHECKOUT QUANTITY
 
 export function displayCheckoutQuantity(){
 
 
-const filmCart = JSON.parse(localStorage.getItem('filmCart'));
+
 const filmItemQuantity = document.createElement('div');
 filmItemQuantity.classList.add('film-quantity-box');
 filmItemQuantity.textContent = 'Quantity:'+filmCart.length; 
@@ -122,6 +118,19 @@ checkoutTotalBox.appendChild(filmItemQuantity);
 };
 
 
+// DISPLAY CART QUANTITY ON CART ICON
+
+export function displayQuantityOnCartImg(){
+  const filmCartQuantity = document.createElement('p');
+  filmCartQuantity.classList.add('film-quantity');
+  filmCartQuantity.textContent = filmCart.length; 
+  const cartImage = document.getElementById('cart-img-box');
+  cartImage.appendChild(filmCartQuantity);
+
+  };
+
+
 
 displayCheckoutQuantity();
 displayCheckoutTotal();
+displayQuantityOnCartImg()

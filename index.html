@@ -8,7 +8,6 @@
       content="Checkout our latest Films at SquareEyes"
     />
 
-    <link rel="stylesheet" href="SquareEyes-Film-Page.css" />
     <link rel="icon" type="image/png" href="Images/favicon-32x32.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,7 +25,7 @@
       src="https://kit.fontawesome.com/04bc286c5b.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src=".//JS FILES/script.js"></script>
+    <script type="module" defer src=".//JS FILES/script.mjs"></script>
     <link rel="stylesheet" href=".//CSS FILES/index.css" />
     <title>SquareEyes Home</title>
   </head>
@@ -88,10 +87,11 @@
             <label id="search-box-label" for="search-box"></label>
             <input id="search-box" type="search" placeholder="Search Films" />
           </form>
-
-          <a class="cart-icon" href="cart.html">
-            <img src="Images/CartIcon-White.png" alt="Cart icon"
-          /></a>
+          <div id="cart-img-box">
+            <a class="cart-icon" href="cart.html">
+              <img src="Images/CartIcon-White.png" alt="Cart icon"
+            /></a>
+          </div>
         </div>
       </div>
     </header>

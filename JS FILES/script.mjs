@@ -1,4 +1,7 @@
 
+
+
+
 // FETCH API
 
 const squareEyesAPI = 'https://v2.api.noroff.dev/square-eyes'
@@ -24,7 +27,7 @@ squareEyesData(squareEyesAPI);
 let films = JSON.parse(localStorage.getItem("listOfFilms"));
 
 
-
+// CREATE FILM HTML
 
 function createFilmsHtml(film){
 
@@ -63,6 +66,7 @@ return filmBox;
 }
 
 
+// DISPLAY ALL FILMS
 
 
 function showAllFilms(){
@@ -74,6 +78,8 @@ function showAllFilms(){
 }
 
 
+
+// DISPLAY FILMS BY CATEGORY
 
 async function showFilmsByCategory(films) {
 
@@ -163,6 +169,20 @@ async function showFilmsByCategory(films) {
 
 
 
+const filmCart = JSON.parse(localStorage.getItem('filmCart'));
+
+
+function displayQuantityOnCartImg(){
+  const filmCartQuantity = document.createElement('p');
+  filmCartQuantity.classList.add('film-quantity');
+  filmCartQuantity.textContent = filmCart.length; 
+  const cartImage = document.getElementById('cart-img-box');
+  cartImage.appendChild(filmCartQuantity);
+
+  };
+
+
+
 
 
 function allFunctions(){
@@ -172,6 +192,8 @@ function allFunctions(){
   showAllFilms(films);
 
   showFilmsByCategory(films);
+
+  displayQuantityOnCartImg()
 };
 
 

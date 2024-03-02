@@ -1,9 +1,9 @@
 
 
   
-let films = JSON.parse(localStorage.getItem("listOfFilms"));
+// let films = JSON.parse(localStorage.getItem("listOfFilms"));
 
-console.log(films)
+// console.log(films)
 
 
 export function createFilmHtml(film){
@@ -101,7 +101,6 @@ export function showFilmCartItems(){
 const filmHtml = createFilmHtml(currentFilm);
 console.log(filmDisplayBox);
 filmDisplayBox.appendChild(filmHtml);
-
   });
 
   console.log(filmCart);
@@ -146,24 +145,19 @@ checkoutTotalBox.appendChild(filmItemQuantity);
 
 };
 
+// DISPLAY CART QUANTITY OVER CART ICON
 
-function displayQuantityOnCartImg(){
+
+export function displayQuantityOnCartImg(){
 
   const filmCart = JSON.parse(localStorage.getItem('filmCart'));
-  const filmCartQuantity = document.createElement('span');
+  const filmCartQuantity = document.createElement('p');
   filmCartQuantity.classList.add('film-quantity');
-  filmCartQuantity.textContent = 'Quantity:'+filmCart.length; 
-  const cartTotalBox = document.createElement('cart-total');
-  cartTotalBox.classList.add('cart-total-box');
-  const cartImage = document.getElementsByClassName('cart-icon');
-  cartTotalBox.append(filmCartQuantity, cartImage);
+  filmCartQuantity.textContent = filmCart.length; 
+  const cartImage = document.getElementById('cart-img-box');
+  cartImage.appendChild(filmCartQuantity);
 
-  const searchCartBox = document.getElementsByClassName('Search-Cart-box');
-  searchCartBox.append(cartTotalBox);
-  
   };
-
-
 
 
 

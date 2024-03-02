@@ -272,7 +272,8 @@ nav a:hover {
   justify-self: end;
 }
 
-.cart-icon {
+.cart-icon,
+#cart-img-box {
   grid-area: cart;
   align-self: center;
   position: relative;
@@ -531,14 +532,21 @@ h3 {
 /* 
 CART PAGE */
 
-.cart-total-box {
-  position: absolute;
+#cart-img-box {
+  position: relative;
+  display: flex;
 }
 
 .film-quantity {
   position: absolute;
-  color: black;
+  color: green;
+  background-color: black;
+  border-radius: 40px;
+  text-align: center;
+  width: 20px;
   font-size: 20px;
+  margin-left: 16px;
+  margin-top: -1px;
 }
 
 /* FOOTER */
