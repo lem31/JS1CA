@@ -129,6 +129,10 @@ export function displayQuantityOnCartImg(){
   };
 
 
+
+
+
+
 function allFunctions(){
 displayCheckoutQuantity();
 displayCheckoutTotal();

@@ -155,7 +155,8 @@ nav a,
 .Add-to-cart-btn,
 .remove-film-btn,
 #cart-total-box,
-.checkout-btn {
+.checkout-btn,
+.order-number-info {
   font-family: var(--Secondary-Font);
   color: var(--White-Text-Color);
 }
@@ -614,6 +615,50 @@ CART PAGE */
 
 .remove-film-btn {
   height: 40px;
+}
+
+/* CHECKOUT SUCCESS PAGE */
+
+/* CHECKOUT SUCCESS PAGE */
+
+.Checkout-success-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+}
+
+.Checkout-success-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+  min-width: 80vw;
+  max-width: 80vw;
+  min-height: 60vh;
+  max-height: 60vh;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+}
+
+.checkout-text {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.tick-icon {
+  width: 5rem;
+  height: 5rem;
+}
+
+.Continue-Browsing-btn {
+  width: 12rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background-color: #9747ff;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 /* FOOTER */
@@ -1715,5 +1760,49 @@ footer img {
     margin-left: -6rem;
     height: 300px;
     padding-bottom: 3rem;
+  }
+
+  /* CHECKOUT SUCCESS PAGE */
+
+  /* CHECKOUT SUCCESS PAGE */
+
+  .Checkout-success-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+  }
+
+  .Checkout-success-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+    min-width: 80vw;
+    max-width: 80vw;
+    min-height: 60vh;
+    max-height: 60vh;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+  }
+
+  .checkout-text {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .tick-icon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .Continue-Browsing-btn {
+    width: 12rem;
+    height: 3rem;
+    border-radius: 1rem;
+    background-color: #9747ff;
+    font-weight: bold;
+    font-size: 1rem;
   }
 }
