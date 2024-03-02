@@ -152,7 +152,8 @@ nav a,
 .release-date,
 .price,
 .Add-to-cart-btn,
-.remove-film-btn {
+.remove-film-btn,
+#cart-total-box {
   font-family: var(--Secondary-Font);
   color: var(--White-Text-Color);
 }
@@ -583,6 +584,15 @@ CART PAGE */
   font-size: 20px;
   margin-left: 16px;
   margin-top: -1px;
+}
+
+.film-quantity-box {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#cart-total-box {
+  margin-bottom: 2.5rem;
 }
 
 .remove-film-btn {
