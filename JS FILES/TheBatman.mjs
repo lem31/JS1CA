@@ -25,6 +25,17 @@ function createFilmsHtml(film){
   filmPoster.src = film.image.url;
   filmPoster.classList.add('film-poster-home');
 
+  const rating = document.createElement('p');
+  rating.textContent = film.rating;
+
+  const releaseDate = document.createElement('h3');
+  releaseDate.textContent = film.released;
+
+  const ratingBox = document.createElement('div');
+  ratingBox.classList.add('rating-box');
+ 
+const ratingImg = document.createElement('img');
+ratingImg.src = "https://img.icons8.com/ios-filled/50/rating.png";
   
   const filmInfo = document.createElement('p');
   filmInfo.textContent = film.description;
@@ -41,7 +52,9 @@ addToCartBtn.addEventListener('click', ()=>{
   
   filmBox.appendChild(filmContent);
   
-  filmContent.append(filmHeader, filmPoster, filmInfo, addToCartBtn);
+  filmContent.append(filmHeader, filmPoster, ratingBox, releaseDate, filmInfo, addToCartBtn);
+
+  ratingBox.append(ratingImg, rating);
   
   
   return filmBox;

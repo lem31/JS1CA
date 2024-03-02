@@ -110,7 +110,8 @@ nav a,
   background-color: var(--Background-Black);
 }
 
-.Return-to-cart-btn {
+.Return-to-cart-btn,
+.Add-to-cart-btn {
   background-color: var(--Purple-Color);
 }
 
@@ -141,7 +142,12 @@ nav a,
 .Continue-Browsing-btn,
 .checkout-text,
 .Film-text-Product-Page-2,
-.Film-text-Product-Page-1 {
+.Film-text-Product-Page-1,
+.rating-box,
+.film-info,
+.release-date,
+.price,
+.Add-to-cart-btn {
   font-family: var(--Secondary-Font);
   color: var(--White-Text-Color);
 }
@@ -173,10 +179,6 @@ body,
 main {
   width: 100%;
   height: 100%;
-}
-
-.rating-box {
-  display: flex;
 }
 
 /* HEADER & NAV */
@@ -527,6 +529,31 @@ h3 {
 
 .Right-chevron-box {
   display: none;
+}
+
+/* PRODUCT PAGE */
+
+.rating-box {
+  display: flex;
+  margin-top: -5rem;
+}
+
+.price {
+  margin-bottom: 2rem;
+}
+
+.release-date {
+  font-size: 20px;
+
+  margin-left: 0.3rem;
+}
+
+.Add-to-cart-btn {
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 9px;
+  border-color: var(--Purple-Color);
+  margin-bottom: 2rem;
 }
 
 /* 

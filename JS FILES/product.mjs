@@ -27,20 +27,24 @@ const wrapper = document.getElementById('films-display-box');
   
   const filmPoster = document.createElement('img');
   filmPoster.src = film.image.url;
+  filmPoster.classList.add('film-poster-home');
   
   const filmPriceBox = document.createElement('div');
   
   const filmPrice = document.createElement('div');
   filmPrice.textContent = film.price + "NOK";
+  filmPrice.classList.add('price');
 
   const filmInfo = document.createElement('p');
   filmInfo.textContent = film.description;
+  filmInfo.classList.add('film-info');
 
   const rating = document.createElement('p');
   rating.textContent = film.rating;
 
-  const releaseDate = document.createElement('h3');
+  const releaseDate = document.createElement('p');
   releaseDate.textContent = film.released;
+  releaseDate.classList.add('release-date');
 
   const ratingBox = document.createElement('div');
   ratingBox.classList.add('rating-box');
