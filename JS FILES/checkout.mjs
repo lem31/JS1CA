@@ -1,8 +1,5 @@
 
 
-
-
-
 function createFilmHtml(film){
   
   const filmBox = document.createElement('div');
@@ -75,7 +72,7 @@ return filmBox;
   
   };
 
-  showFilmCartItems();
+
 
 
 
@@ -130,7 +127,10 @@ export function displayQuantityOnCartImg(){
   };
 
 
-
+function allFunctions(){
 displayCheckoutQuantity();
 displayCheckoutTotal();
 displayQuantityOnCartImg()
+showFilmCartItems();}
+
+allFunctions();

@@ -11,7 +11,7 @@ async function fetchClickedFilm() {
 
 // CREATE FILM HTML
   
-function createFilmsHtml(film){
+export function createFilmsHtml(film){
 
 const wrapper = document.getElementById('films-display-box');
   
@@ -57,7 +57,7 @@ ratingImg.src = "https://img.icons8.com/ios-filled/50/rating.png";
 addToCartBtn.addEventListener('click', ()=>{
   addFilmToCart(film);
 
-} )
+} );
 
 wrapper.appendChild(filmBox);
   
@@ -71,14 +71,14 @@ ratingBox.append(ratingImg, rating);
   
   buttonBox.append(addToCartBtn);
   return filmBox;
-  }
+  };
 
 
 
 
   // CREATE FILM CART
 
-  function createFilmCart(){
+  export function createFilmCart(){
     const filmCart = localStorage.getItem('filmCart');
     if (!filmCart)  { localStorage.setItem('filmCart', JSON.stringify([]))}
   }
@@ -88,7 +88,7 @@ ratingBox.append(ratingImg, rating);
 // ADD FILM(s) to CART
 
 
-function addFilmToCart(film){ 
+export function addFilmToCart(film){ 
 const filmCart = JSON.parse(localStorage.getItem('filmCart'));
 for (let i=0; i< filmCart.length; i++){
   if(filmCart[i].title === film.title){
@@ -105,11 +105,28 @@ console.log(filmCart);
 };
 
 
+//  DISPLAY CART QUANTITY ON CART IMAGE
+
+const filmCart = JSON.parse(localStorage.getItem('filmCart'));
+
+
+function displayQuantityOnCartImg(){
+  const filmCartQuantity = document.createElement('p');
+  filmCartQuantity.classList.add('film-quantity');
+  filmCartQuantity.textContent = filmCart.length; 
+  const cartImage = document.getElementById('cart-img-box');
+  cartImage.appendChild(filmCartQuantity);
+
+  };
+
+
+
 
 
 async function allFunctions(){
   await fetchClickedFilm();
- await createFilmCart();
+  await createFilmCart();
+  await displayQuantityOnCartImg();
 
 };
 

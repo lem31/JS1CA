@@ -26,6 +26,9 @@ squareEyesData(squareEyesAPI);
 
 let films = JSON.parse(localStorage.getItem("listOfFilms"));
 
+console.log(films);
+
+
 
 // CREATE FILM HTML
 
@@ -53,7 +56,6 @@ localStorage.setItem('film', JSON.stringify(film))
 const posterLink = document.createElement('a');
 
 posterLink.href= `./product.html?id=${film.id}/`;
-
 
 posterLink.appendChild(filmPoster);
 
@@ -169,6 +171,8 @@ async function showFilmsByCategory(films) {
 
 
 
+// DISPLAY CART QUANTITY ON CART IMAGE
+
 const filmCart = JSON.parse(localStorage.getItem('filmCart'));
 
 
@@ -180,6 +184,7 @@ function displayQuantityOnCartImg(){
   cartImage.appendChild(filmCartQuantity);
 
   };
+
 
 
 
