@@ -138,7 +138,8 @@ nav a,
 .h4-checkout,
 .film-header,
 .film-header-product,
-.cart-h1 {
+.cart-h1,
+#message-label {
   color: var(--White-Text-Color);
   font-family: var(--Primary-Font);
 }
@@ -721,6 +722,140 @@ footer img {
   margin-left: 0.2rem;
 }
 
+/* CONTACT PAGE */
+
+.Contact-Page {
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.h1-contact-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 8rem;
+}
+
+.h1-contact {
+  display: flex;
+  width: 10rem;
+  justify-content: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  height: 30rem;
+  background-color: black;
+  align-self: center;
+  justify-self: start;
+  justify-content: center;
+  align-items: center;
+}
+
+.h2-contact-box {
+  display: flex;
+  width: 46.6rem;
+  justify-content: start;
+  margin-bottom: 2rem;
+}
+
+.h2-contact {
+  display: flex;
+  width: 16rem;
+  font-size: 1.5rem;
+  justify-content: center;
+}
+
+.contact-flex-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Name-labels-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 600px;
+  gap: 2rem;
+}
+
+.First-Name-Wrapper,
+.Last-Name-Wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#FN-label,
+#LN-label {
+  margin-left: 0.3rem;
+}
+
+.Contact-label {
+  color: white;
+}
+
+#First-Name {
+  padding: 0.5rem 4rem;
+  background-color: #2e2c2c;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+}
+
+#Last-Name {
+  padding: 0.5rem 4rem;
+  background-color: #2e2c2c;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+}
+
+.Email-message-boxes {
+  display: flex;
+  flex-direction: column;
+}
+
+#Email-label {
+  padding-top: 1rem;
+  margin-left: 0.3rem;
+}
+
+#Email-input {
+  padding: 0.5rem 3rem;
+  background-color: #2e2c2c;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  width: 12rem;
+}
+
+.Contact-label {
+  margin-top: 1rem;
+}
+
+#Your-message {
+  padding: 1.5rem 3.8rem;
+  background-color: #2e2c2c;
+  border: 2px solid white;
+  width: 15rem;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  width: 7rem;
+  height: 2rem;
+  background-color: #9747ff;
+  color: white;
+  border-radius: 0.3rem;
+}
+
 /*  SMALL SCREEN MOBILE MEDIA QUERIES */
 
 @media (max-width: 500px) {
@@ -1065,7 +1200,7 @@ footer img {
   }
 
   .contact-box {
-    width: 18rem;
+    width: 20rem;
     height: 30rem;
   }
 
